@@ -9,6 +9,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style1.css">
+    <style>
+        .sproduct input {
+            width: 50px;
+            height: 40px;
+            padding-left: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        
+        .sproduct input:focus {
+            outline: none;
+        }
+        
+        .buy-btn {
+            background-color: coral;
+            opacity: 1;
+            transition: 0.3s all;
+        }
+    </style>
 </head>
 
 <body>
@@ -45,12 +64,21 @@
             </div>
         </div>
     </nav>
-    <section class="sproduct">
-        <div class="row">
+    <!--Product details-->
+    <section class="container sproduct my-5 pt-5">
+        <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
-                <img src="" alt="">
+                <img class="img-fluid w-100 pb-1" src="shopprodimg/Best Buy_ ASUS ROG STRIX Z390-E GAMING (Socket LGA1151) USB 3_1 Gen 1 Intel Motherboard with LED Lighting ROG STRIX Z390-E GAMING.jpeg" id="MainImg" alt="">
             </div>
-            <div></div>
+            <div class="col-lg-6 col-md-12 col-12">
+                <h6> Home / Shop / Featured Products</h6>
+                <h3 class="py-4">ASUS ROG STRIX Z390-E</h3>
+                <h2>PKR 44,160</h2>
+                <input type="number" value="1">
+                <button class="buy-btn">Add to Cart</button>
+                <h4 class="mt-5 mb-5">Product Details</h4>
+                <span>The ASUS ROG STRIX Z390-E is a high-end motherboard tailored for gaming and performance enthusiasts. It's designed to support Intel 8th and 9th generation processors, featuring the LGA1151 socket. With an ATX form factor, it offers plenty of room for expansion and customization. The motherboard comes with robust features, including dual M.2 slots, support for USB 3.1 Gen2, and comprehensive RGB lighting options. It also boasts SupremeFX audio for immersive gaming experiences. Additionally, its Wi-Fi connectivity and excellent overclocking capabilities make it a popular choice among gamers and power users seeking top-tier performance and aesthetics.</span>
+            </div>
         </div>
 
     </section>
@@ -119,6 +147,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script>
+        var MainImg = document.getElementById('MainImg');
+    </script>
 </body>
 
 </html>
