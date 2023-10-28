@@ -398,7 +398,6 @@ footer .copyright a:hover {
     height: 35em;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .card {
@@ -411,6 +410,11 @@ footer .copyright a:hover {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 0 2em;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+    filter: blur(1px);
 }
 
 .card__image {
