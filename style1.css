@@ -1034,3 +1034,24 @@ footer .copyright a:hover {
     border-radius: 10px;
     margin-right: 15px;
 }
+
+
+/*Acessories styling*/
+
+.access {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+.access .card-body .card-text {
+    font-size: 28px;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-transform: capitalize;
+}
