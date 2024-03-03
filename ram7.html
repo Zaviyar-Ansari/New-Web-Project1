@@ -42,7 +42,7 @@
             <img src="logoimg/logo.png" alt="">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span><i id="bar" class="fa-solid fa-bars"></i></span>
-</button>
+    </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
 
@@ -62,7 +62,7 @@
                         <a class="nav-link" href="contactuspage.html">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <i class="fa-solid fa-bag-shopping"></i>
+                        <i class="fa-solid fa-bag-shopping"></i> >
                         <a href="home.php"><i class="fa-regular fa-user"></i></a>
                     </li>
                 </ul>
@@ -73,22 +73,19 @@
     <section class="container sproduct my-5 pt-5">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid w-100 pb-1" src="prebuildimg1/Best Gaming PCs.jpeg" id="MainImg" alt="">
+                <img class="img-fluid w-100 pb-1" src="accessories/ram/" id="MainImg" alt="">
             </div>
             <div class="col-lg-6 col-md-12 col-12">
-                <h6> Home / Pre Build</h6>
-                <h3 class="py-4">Cyber Fusion X</h3>
-                <h2>PKR 120,000</h2>
+                <h6> Home / Acessories / RAM</h6>
+                <h3 class="py-4"></h3>
+                <h2>PKR </h2>
                 <input type="number" value="1">
                 <button class="buy-btn">Add to Cart</button>
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-pc-case-6011776.png" alt=""> <b><u>Cooler Master MB511 RGB</u></b> <img src="preduilticon/noun-cpu-1136736.png" alt=""> <b><u>AMD Ryzen 5 5600X</u></b></h4>
-                    <h4> <img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u> NVIDIA GeForce RTX 3060</u></b> <img src="preduilticon/noun-motherboard-3140591.png" alt=""> <b><u>MSI B550-A PRO</u></b></h4>
-                    <h4> <img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u>Corsair LPX 16Gb DDR4 </u></b> <img src="preduilticon/noun-ssd-2374273.png" alt=""> <b><u>Kingstone A2000 500Gb NVMe SSD</u></b></h4>
-                    <h4><img src="preduilticon/noun-power-supply-6376705.png" alt=""> <b><u>corsair CX650M -A</u></b></h4>
+                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u></u></b></h4>
                 </div>
-                <span>The Cooler Master MB511 RGB Gaming PC, equipped with an AMD Ryzen 5 5600X and NVIDIA GeForce RTX 3060 for exceptional gaming performance. The MSI B550-A PRO motherboard ensures stability, while Corsair LPX 16GB DDR4 RAM guarantees smooth multitasking. Storage is lightning-fast with the Kingston A2000 500GB NVMe SSD, all powered by the reliable Corsair CX650M. Encased in the stylish Cooler Master MB511 with RGB lighting, this gaming setup delivers a perfect blend of power, speed, and visual appeal for an immersive gaming experience.</span>
+                <span></span>
 
             </div>
         </div>
@@ -229,8 +226,46 @@
     <script>
         var MainImg = document.getElementById('MainImg');
     </script>
-</body>
+    <!--cart page script -->
+    <!-- Add this script section to the bottom of your HTML file -->
+    <script>
+        var MainImg = document.getElementById('MainImg');
 
-</html>
+        function addToCart() {
+            // Get product details
+            var productName = "Your Product Name"; // Update with actual product name
+            var productPrice = 1000; // Update with actual product price
+            var quantity = parseInt(document.querySelector('.sproduct input').value);
+
+            // Create an object representing the item
+            var cartItem = {
+                name: productName,
+                price: productPrice,
+                quantity: quantity
+            };
+
+            // Get the existing cart items from local storage (if any)
+            var existingCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            // Check if the item is already in the cart
+            var existingItemIndex = existingCartItems.findIndex(item => item.name === productName);
+
+            if (existingItemIndex !== -1) {
+                // If the item is already in the cart, update the quantity
+                existingCartItems[existingItemIndex].quantity += quantity;
+            } else {
+                // If the item is not in the cart, add it
+                existingCartItems.push(cartItem);
+            }
+
+            // Save the updated cart items to local storage
+            localStorage.setItem('cartItems', JSON.stringify(existingCartItems));
+
+            // Provide visual feedback to the user (you can customize this part)
+            alert('Item added to the cart!');
+        }
+    </script>
+
+</body>
 
 </html>
