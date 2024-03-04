@@ -37,6 +37,13 @@ if(isset($_GET['delete_all'])){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+   <style>
+      .cart-image {
+   max-width: 100px;
+   max-height: 100px;
+}
+
+   </style>
 
 </head>
 <body>
@@ -69,7 +76,8 @@ if(isset($_GET['delete_all'])){
          ?>
 
          <tr>
-            <td><img src="uploaded_img/<?php echo $fetch_cart['image']; ?>" height="100" alt=""></td>
+            
+         <td><img style="max-width: 100px; max-height: 100px;" src="<?php echo $fetch_cart['image']; ?>" id="MainImg" alt=""></td>
             <td><?php echo $fetch_cart['name']; ?></td>
             <td>$<?php echo $fetch_cart['price']; ?>/-</td>
             <td>
