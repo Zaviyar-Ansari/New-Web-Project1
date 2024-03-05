@@ -1,4 +1,63 @@
-<!doctype html>
+<?php
+@include 'config.php';
+
+$message = array(); // Initialize an empty array for messages
+
+// Check if the form was submitted
+if(isset($_POST['add_to_cart'])){
+    // Form submission logic
+    $product_id = 65; // Set the product ID to 3
+
+    // Fetch product data based on the provided product ID
+    $select_product = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$product_id'");
+
+    if(mysqli_num_rows($select_product) > 0){
+        $product_data = mysqli_fetch_assoc($select_product);
+
+        $product_name = $product_data['name'];
+        $product_price = $product_data['price'];
+        $product_image = $product_data['image'];
+        $product_quantity = 1;
+
+        // Check if the product is already in the cart
+        $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name'");
+
+        if(mysqli_num_rows($select_cart) > 0){
+            $message[] = 'Product already added to cart';
+        } else {
+            // Insert the product into the cart table
+            $insert_product = mysqli_query($conn, "INSERT INTO `cart` (name, price, image, quantity) VALUES ('$product_name', '$product_price', '$product_image', '$product_quantity')");
+            if($insert_product){
+                $message[] = 'Product added to cart successfully';
+
+                // If you want to store the data in another table, you can do so here
+                // For example, let's say you have a table named 'orders' to store order details
+                $insert_order = mysqli_query($conn, "INSERT INTO `orders` (product_id, product_name, product_price, product_image, quantity) VALUES ('$product_id', '$product_name', '$product_price', '$product_image', '$product_quantity')");
+                if($insert_order){
+                    $message[] = 'Order details stored successfully';
+                } else {
+                    $message[] = 'Error storing order details: ' . mysqli_error($conn); // Display MySQL error message
+                }
+            } else {
+                $message[] = 'Error adding product to cart: ' . mysqli_error($conn); // Display MySQL error message
+            }
+        }
+        
+        // Redirect to the same page to prevent form resubmission
+        header("Location: {$_SERVER['PHP_SELF']}");
+        exit();
+    } else {
+        $message[] = 'Product not found';
+    }
+}
+
+// Display messages
+if(isset($message)){
+    foreach($message as $msg){
+        echo '<div class="message">' . $msg . '</div>';
+    }
+}
+?><!doctype html>
 <html lang="en">
 
 <head>
@@ -10,29 +69,31 @@
     />
     <link rel="stylesheet" href="style1.css">
     <style>
-        .sproduct input {
-            width: 50px;
-            height: 40px;
-            padding-left: 10px;
-            font-size: 16px;
-            margin-right: 10px;
-        }
-        
-        .sproduct input:focus {
-            outline: none;
-        }
-        
-        .buy-btn {
-            background-color: coral;
-            opacity: 1;
-            transition: 0.3s all;
-        }
-        
-        .icon img {
-            height: 55px;
-            width: 48px;
-        }
-    </style>
+            .sproduct input {
+                width: 50px;
+                height: 40px;
+                padding-left: 10px;
+                font-size: 16px;
+                margin-right: 10px;
+            }
+            
+            .sproduct input:focus {
+                outline: none;
+            }
+            
+            .buy-btn {
+                padding: 0px 20px;
+                min-width: 120px;
+                background-color: coral;
+                opacity: 1;
+                transition: 0.3s all;
+            }
+            
+            .icon img {
+                height: 55px;
+                width: 48px;
+            }
+        </style>
 </head>
 
 <body>
@@ -71,24 +132,26 @@
     </nav>
     <!--Product details-->
     <section class="container sproduct my-5 pt-5">
+    <form action="#" method="post">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid w-100 pb-1" src="accessories/case/Cougar Blazer Review.jpeg" id="MainImg" alt="">
+                <img class="img-fluid w-100 pb-1" src="accessories/case/MBX MKII Prototype I Gallery.jpeg" id="MainImg" alt="">
             </div>
             <div class="col-lg-6 col-md-12 col-12">
                 <h6> Home / Acessories / Cases</h6>
-                <h3 class="py-4">COUGAR Blazer-Mid Tower Gaming Case</h3>
-                <h2>PKR 65,675</h2>
-                <input type="number" value="1">
-                <button class="buy-btn">Add to Cart</button>
+                <h3 class="py-4">Murderbox MKII 008 ATX Temper Glass</h3>
+                <h2> PKR 4,279</h2>
+                <input type="hidden" name="product_id" value="65"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-pc-case-6011776.png" alt=""> <b><u>COUGAR Blazer-Mid Tower Gaming Case</u></b>
+                    <h4><img src="preduilticon/noun-pc-case-6011776.png" alt=""> <b><u>Murderbox MKII 008 ATX Temper Glass</u></b>
                 </div>
-                <span>The COUGAR Blazer Mid Tower Gaming Case is a versatile and stylish chassis designed for gaming enthusiasts. With its mid-tower form factor, it offers a balance between size and component support. The case features a design tailored for gaming setups, providing ample space for high-performance components and efficient cooling solutions. It's a suitable choice for users looking to build a gaming PC with both functionality and aesthetic appeal.</span>
+                <span>
+                    The Murderbox MKII 008 ATX Tempered Glass is a high-end and meticulously crafted computer case designed for enthusiasts. Featuring a premium aluminum construction and tempered glass panels, it combines durability with a modern aesthetic. The ATX form factor provides ample space for high-performance components, and the tempered glass allows for a clear view of the meticulously organized interior. It's an exceptional choice for users seeking a top-tier case for their high-end builds.</span>
             </div>
         </div>
-
+        </form>
     </section>
     <!--Related products-->
     <section id="featured" class="my-5 pb-5">
@@ -225,12 +288,8 @@
     <script>
         var MainImg = document.getElementById('MainImg');
     </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
 
-</html>
-
-</html>
-
-</html>
