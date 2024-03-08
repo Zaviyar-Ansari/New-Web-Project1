@@ -1,4 +1,63 @@
-<!doctype html>
+<?php
+@include 'config.php';
+
+$message = array(); // Initialize an empty array for messages
+
+// Check if the form was submitted
+if(isset($_POST['add_to_cart'])){
+    // Form submission logic
+    $product_id = $_POST['product_id']; // Get the product ID from the form
+
+    // Fetch product data based on the provided product ID
+    $select_product = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$product_id'");
+
+    if(mysqli_num_rows($select_product) > 0){
+        $product_data = mysqli_fetch_assoc($select_product);
+
+        $product_name = $product_data['name'];
+        $product_price = $product_data['price'];
+        $product_image = $product_data['image'];
+        $product_quantity = 1;
+
+        // Check if the product is already in the cart
+        $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name'");
+
+        if(mysqli_num_rows($select_cart) > 0){
+            $message[] = 'Product already added to cart';
+        } else {
+            // Insert the product into the cart table
+            $insert_product = mysqli_query($conn, "INSERT INTO `cart` (name, price, image, quantity) VALUES ('$product_name', '$product_price', '$product_image', '$product_quantity')");
+            if($insert_product){
+                $message[] = 'Product added to cart successfully';
+
+                // If you want to store the data in another table, you can do so here
+                // For example, let's say you have a table named 'orders' to store order details
+                $insert_order = mysqli_query($conn, "INSERT INTO `orders` (product_id, product_name, product_price, product_image, quantity) VALUES ('$product_id', '$product_name', '$product_price', '$product_image', '$product_quantity')");
+                if($insert_order){
+                    $message[] = 'Order details stored successfully';
+                } else {
+                    $message[] = 'Error storing order details: ' . mysqli_error($conn); // Display MySQL error message
+                }
+            } else {
+                $message[] = 'Error adding product to cart: ' . mysqli_error($conn); // Display MySQL error message
+            }
+        }
+        
+        // Redirect to the same page to prevent form resubmission
+        header("Location: {$_SERVER['PHP_SELF']}");
+        exit();
+    } else {
+        $message[] = 'Product not found';
+    }
+}
+
+// Display messages
+if(isset($message)){
+    foreach($message as $msg){
+        echo '<div class="message">' . $msg . '</div>';
+    }
+}
+?><!doctype html>
 <html lang="en">
 
 <head>
@@ -87,7 +146,10 @@
                 </div>
                 <h5 class="p-name">Speed Demon XT</h5>
                 <h4 class="p-price"> PKR 90,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="21"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
             <div onclick="window.location.href='2prebuild2.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -101,7 +163,10 @@
                 </div>
                 <h5 class="p-name">EliteGamer X</h5>
                 <h4 class="p-price"> PKR 120,000 </h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="22"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
 
             <!--third-->
@@ -116,7 +181,10 @@
                 </div>
                 <h5 class="p-name">MegaMultitasker 3000</h5>
                 <h4 class="p-price"> PKR 110,000 </h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="23"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
             <div onclick="window.location.href='2prebuild4.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -130,7 +198,10 @@
                 </div>
                 <h5 class="p-name">PowerBeast Pro</h5>
                 <h4 class="p-price"> PKR 150,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="24"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--Second part-->
             <!--first-->
@@ -145,7 +216,10 @@
                 </div>
                 <h5 class="p-name">UltimateWorkstation 5000</h5>
                 <h4 class="p-price"> PKR 180,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="25"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
             <div onclick="window.location.href='2prebuild6.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -159,7 +233,10 @@
                 </div>
                 <h5 class="p-name">Shadow Nova </h5>
                 <h4 class="p-price"> PKR 125,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="26"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
             <div onclick="window.location.href='2prebuild7.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -173,7 +250,10 @@
                 </div>
                 <h5 class="p-name">GamingTitan X2</h5>
                 <h4 class="p-price"> PKR 130,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="27"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
             <div onclick="window.location.href='2prebuild8.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -187,7 +267,10 @@
                 </div>
                 <h5 class="p-name">SilentMaster Deluxe</h5>
                 <h4 class="p-price"> PKR 100,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="28"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third part-->
             <!--first-->
@@ -202,7 +285,10 @@
                 </div>
                 <h5 class="p-name">BudgetBeast Lite</h5>
                 <h4 class="p-price"> PKR 70,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="29"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
             <div onclick="window.location.href='2prebuild10.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -216,7 +302,10 @@
                 </div>
                 <h5 class="p-name">ProCreator Plus</h5>
                 <h4 class="p-price"> PKR 160,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="30"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
             <div onclick="window.location.href='2prebuild11.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -230,7 +319,10 @@
                 </div>
                 <h5 class="p-name">PowerBeast Pro</h5>
                 <h4 class="p-price"> PKR 150,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="31"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
             <div onclick="window.location.href='2prebuild12.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -244,7 +336,10 @@
                 </div>
                 <h5 class="p-name">Quantum Blaze</h5>
                 <h4 class="p-price"> PKR 120,000 </h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="32"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth part-->
             <!--first-->
@@ -259,7 +354,10 @@
                 </div>
                 <h5 class="p-name">Phoenix Ascendant</h5>
                 <h4 class="p-price"> PKR 140,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="33"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
             <div onclick="window.location.href='2prebuild14.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -273,7 +371,10 @@
                 </div>
                 <h5 class="p-name">Stealth Vortex</h5>
                 <h4 class="p-price">PKR 135,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="34"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
             <div onclick="window.location.href='2prebuild15.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -287,7 +388,10 @@
                 </div>
                 <h5 class="p-name">Phoenix Ascendant</h5>
                 <h4 class="p-price">PKR 140,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="35"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
             <div onclick="window.location.href='2prebuild16.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -301,7 +405,10 @@
                 </div>
                 <h5 class="p-name">Aurora Pulse</h5>
                 <h4 class="p-price"> PKR 115,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="36"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--Fifth part-->
             <!--first-->
@@ -316,7 +423,10 @@
                 </div>
                 <h5 class="p-name">Galactic Fury</h5>
                 <h4 class="p-price">PKR 130,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="37"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
             <div onclick="window.location.href='2prebuild18.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -330,7 +440,10 @@
                 </div>
                 <h5 class="p-name">Cyber Serenity</h5>
                 <h4 class="p-price">PKR 150,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="38"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
             <div onclick="window.location.href='2prebuild19.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -344,7 +457,10 @@
                 </div>
                 <h5 class="p-name">Mirage Master</h5>
                 <h4 class="p-price">PKR 130,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="39"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
             <div onclick="window.location.href='2prebuild20.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -358,20 +474,23 @@
                 </div>
                 <h5 class="p-name">Nebula Nova</h5>
                 <h4 class="p-price">PKR 140,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="40"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <nav aria-label="...">
                 <ul class="pagination mt-5">
                     <li class="page-item">
-                        <a class="page-link" href="prebuildshop1.html">Previous</a>
+                        <a class="page-link" href="prebuildshop1.php">Previous</a>
                     </li>
-                    <li class="page-item"><a class="page-link" href="prebuildshop1.html">1</a></li>
+                    <li class="page-item"><a class="page-link" href="prebuildshop1.php">1</a></li>
                     <li class="page-item active" aria-current="page">
-                        <a class="page-link" href="prebuildshop2.html">2</a>
+                        <a class="page-link" href="prebuildshop2.php">2</a>
                     </li>
-                    <li class="page-item"><a class="page-link" href="prebuildshop3.html">3</a></li>
+                    <li class="page-item"><a class="page-link" href="prebuildshop3.php">3</a></li>
                     <li class="page-item">
-                        <a class="page-link" href="prebuildshop3.html">Next</a>
+                        <a class="page-link" href="prebuildshop3.php">Next</a>
                     </li>
                 </ul>
             </nav>
@@ -443,6 +562,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

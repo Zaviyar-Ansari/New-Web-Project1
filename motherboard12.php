@@ -1,4 +1,63 @@
-<!doctype html>
+<?php
+@include 'config.php';
+
+$message = array(); // Initialize an empty array for messages
+
+// Check if the form was submitted
+if(isset($_POST['add_to_cart'])){
+    // Form submission logic
+    $product_id = 83; // Set the product ID to 3
+
+    // Fetch product data based on the provided product ID
+    $select_product = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$product_id'");
+
+    if(mysqli_num_rows($select_product) > 0){
+        $product_data = mysqli_fetch_assoc($select_product);
+
+        $product_name = $product_data['name'];
+        $product_price = $product_data['price'];
+        $product_image = $product_data['image'];
+        $product_quantity = 1;
+
+        // Check if the product is already in the cart
+        $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name'");
+
+        if(mysqli_num_rows($select_cart) > 0){
+            $message[] = 'Product already added to cart';
+        } else {
+            // Insert the product into the cart table
+            $insert_product = mysqli_query($conn, "INSERT INTO `cart` (name, price, image, quantity) VALUES ('$product_name', '$product_price', '$product_image', '$product_quantity')");
+            if($insert_product){
+                $message[] = 'Product added to cart successfully';
+
+                // If you want to store the data in another table, you can do so here
+                // For example, let's say you have a table named 'orders' to store order details
+                $insert_order = mysqli_query($conn, "INSERT INTO `orders` (product_id, product_name, product_price, product_image, quantity) VALUES ('$product_id', '$product_name', '$product_price', '$product_image', '$product_quantity')");
+                if($insert_order){
+                    $message[] = 'Order details stored successfully';
+                } else {
+                    $message[] = 'Error storing order details: ' . mysqli_error($conn); // Display MySQL error message
+                }
+            } else {
+                $message[] = 'Error adding product to cart: ' . mysqli_error($conn); // Display MySQL error message
+            }
+        }
+        
+        // Redirect to the same page to prevent form resubmission
+        header("Location: {$_SERVER['PHP_SELF']}");
+        exit();
+    } else {
+        $message[] = 'Product not found';
+    }
+}
+
+// Display messages
+if(isset($message)){
+    foreach($message as $msg){
+        echo '<div class="message">' . $msg . '</div>';
+    }
+}
+?><!doctype html>
 <html lang="en">
 
 <head>
@@ -10,29 +69,31 @@
     />
     <link rel="stylesheet" href="style1.css">
     <style>
-        .sproduct input {
-            width: 50px;
-            height: 40px;
-            padding-left: 10px;
-            font-size: 16px;
-            margin-right: 10px;
-        }
-        
-        .sproduct input:focus {
-            outline: none;
-        }
-        
-        .buy-btn {
-            background-color: coral;
-            opacity: 1;
-            transition: 0.3s all;
-        }
-        
-        .icon img {
-            height: 55px;
-            width: 48px;
-        }
-    </style>
+            .sproduct input {
+                width: 50px;
+                height: 40px;
+                padding-left: 10px;
+                font-size: 16px;
+                margin-right: 10px;
+            }
+            
+            .sproduct input:focus {
+                outline: none;
+            }
+            
+            .buy-btn {
+                padding: 0px 20px;
+                min-width: 120px;
+                background-color: coral;
+                opacity: 1;
+                transition: 0.3s all;
+            }
+            
+            .icon img {
+                height: 55px;
+                width: 48px;
+            }
+        </style>
 </head>
 
 <body>
@@ -71,25 +132,26 @@
     </nav>
     <!--Product details-->
     <section class="container sproduct my-5 pt-5">
+    <form action="#" method="post">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid w-100 pb-1" src="accessories/motherboard/MSI Releases Z490 Chipset Motherboards For Intel 10th Gen CPUs.jpeg" id="MainImg" alt="">
+                <img class="img-fluid w-100 pb-1" src="accessories/motherboard/b2e0c4efe3e3c9bf8d995f728117a252.jpg" id="MainImg" alt="">
             </div>
             <div class="col-lg-6 col-md-12 col-12">
                 <h6> Home / Acessories / Motherboards</h6>
-                <h3 class="py-4">Msi MPG intel Z490 Gamming</h3>
-                <h2> PKR 76,799</h2>
-                <input type="number" value="1">
-                <button class="buy-btn">Add to Cart</button>
+                <h3 class="py-4">GIgabyte X399 Arous Gaming 7</h3>
+                <h2>PKR 212,899</h2>
+                <input type="hidden" name="product_id" value="83"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4> <img src="preduilticon/noun-motherboard-3140591.png" alt=""> <b><u>Msi MPG intel Z490 Gamming</u></b>
+                    <h4> <img src="preduilticon/noun-motherboard-3140591.png" alt=""> <b><u>GIgabyte X399 Arous Gaming 7</u></b>
                 </div>
                 <span>
-                    The MSI MPG Intel Z490 Gaming is a motherboard designed for 10th and 11th generation Intel Core processors, utilizing the LGA 1200 socket. Built on the Intel Z490 chipset, it provides a solid foundation for gaming and high-performance computing. With an ATX form factor, it supports multiple PCIe slots, DDR4 memory, and features like Mystic Light RGB for customizable lighting. The motherboard is part of MSI's MPG (MSI Performance Gaming) series, aiming to deliver a balance of performance and features for gamers. Please note that specifications may vary based on the exact model within the MPG Z490 Gaming series.</span>
+                    The Gigabyte X399 AORUS Gaming 7 is a motherboard designed for high-end desktops, featuring the AMD X399 chipset. Compatible with AMD Ryzen Threadripper processors, it supports the TR4 socket. With an ATX form factor, it provides ample space for multiple PCIe slots, DDR4 memory, and robust power delivery. Tailored for gaming with RGB Fusion lighting and gaming-centric features, it's suitable for users seeking a performance-oriented platform for gaming, content creation, and other demanding tasks.</span>
             </div>
         </div>
-
+        </form>
     </section>
     <!--Related products-->
     <section id="featured" class="my-5 pb-5">
@@ -226,12 +288,8 @@
     <script>
         var MainImg = document.getElementById('MainImg');
     </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
 
-</html>
-
-</html>
-
-</html>

@@ -46,7 +46,7 @@
                         <a class="nav-link" href="contactuspage.html">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <i class="fa-solid fa-bag-shopping"></i> >
+                        <a href="cart.php"><i class="fa-solid fa-bag-shopping"></i> </a>
                         <a href="home.php"><i class="fa-regular fa-user"></i></a>
                     </li>
                 </ul>
@@ -81,7 +81,7 @@
                 <img class="image-fluid" src="prodcatgimg/catgimg1.jpeg" alt="">
                 <div class="details">
                     <h2>Pre Build PC</h2>
-                    <a href="prebuildshop1.html"><button class="text-uppercase">Shop Now</button></a>
+                    <a href="prebuildshop1.php"><button class="text-uppercase">Shop Now</button></a>
                 </div>
             </div>
             <div class="one col-lg-4 col-md-12 col-12 p-0">

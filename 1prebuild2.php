@@ -301,8 +301,6 @@ if(isset($message)){
         <script>
             var MainImg = document.getElementById('MainImg');
         </script>
+        <script src="js/script.js"></script>
     </body>
-
-    </html>
-
     </html>

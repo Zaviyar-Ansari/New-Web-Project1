@@ -1,4 +1,63 @@
-<!doctype html>
+<?php
+@include 'config.php';
+
+$message = array(); // Initialize an empty array for messages
+
+// Check if the form was submitted
+if(isset($_POST['add_to_cart'])){
+    // Form submission logic
+    $product_id = $_POST['product_id']; // Get the product ID from the form
+
+    // Fetch product data based on the provided product ID
+    $select_product = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$product_id'");
+
+    if(mysqli_num_rows($select_product) > 0){
+        $product_data = mysqli_fetch_assoc($select_product);
+
+        $product_name = $product_data['name'];
+        $product_price = $product_data['price'];
+        $product_image = $product_data['image'];
+        $product_quantity = 1;
+
+        // Check if the product is already in the cart
+        $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name'");
+
+        if(mysqli_num_rows($select_cart) > 0){
+            $message[] = 'Product already added to cart';
+        } else {
+            // Insert the product into the cart table
+            $insert_product = mysqli_query($conn, "INSERT INTO `cart` (name, price, image, quantity) VALUES ('$product_name', '$product_price', '$product_image', '$product_quantity')");
+            if($insert_product){
+                $message[] = 'Product added to cart successfully';
+
+                // If you want to store the data in another table, you can do so here
+                // For example, let's say you have a table named 'orders' to store order details
+                $insert_order = mysqli_query($conn, "INSERT INTO `orders` (product_id, product_name, product_price, product_image, quantity) VALUES ('$product_id', '$product_name', '$product_price', '$product_image', '$product_quantity')");
+                if($insert_order){
+                    $message[] = 'Order details stored successfully';
+                } else {
+                    $message[] = 'Error storing order details: ' . mysqli_error($conn); // Display MySQL error message
+                }
+            } else {
+                $message[] = 'Error adding product to cart: ' . mysqli_error($conn); // Display MySQL error message
+            }
+        }
+        
+        // Redirect to the same page to prevent form resubmission
+        header("Location: {$_SERVER['PHP_SELF']}");
+        exit();
+    } else {
+        $message[] = 'Product not found';
+    }
+}
+
+// Display messages
+if(isset($message)){
+    foreach($message as $msg){
+        echo '<div class="message">' . $msg . '</div>';
+    }
+}
+?><!doctype html>
 <html lang="en">
 
 <head>
@@ -87,7 +146,10 @@
                 </div>
                 <h5 class="p-name">MSI MEG X570 ACE Motherboard</h5>
                 <h4 class="p-price"> PKR 153,674</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="73"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
             <div onclick="window.location.href='motherboard2.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -101,7 +163,10 @@
                 </div>
                 <h5 class="p-name">Aorus X299X Aorus MASTER</h5>
                 <h4 class="p-price"> PKR 169,257</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="74"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
             <div onclick="window.location.href='motherboard3.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -115,7 +180,10 @@
                 </div>
                 <h5 class="p-name">ASUS ROG MAXIMUS VIII HERO ALPHA</h5>
                 <h4 class="p-price"> PKR 68,957</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="75"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
             <div onclick="window.location.href='motherboard4.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -129,7 +197,10 @@
                 </div>
                 <h5 class="p-name">Asus Sabertooth Z170 Mark 1</h5>
                 <h4 class="p-price"> PKR 56,464</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="76"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--Second part-->
             <!--first-->
@@ -144,7 +215,10 @@
                 </div>
                 <h5 class="p-name">GIGABYTE Z370 AORUS Gaming 5</h5>
                 <h4 class="p-price"> PKR 93,029</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="77"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
             <div onclick="window.location.href='motherboard6.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -158,7 +232,10 @@
                 </div>
                 <h5 class="p-name">ASUS TUF Z270 Mark 1</h5>
                 <h4 class="p-price"> PKR 73,960</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="78"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
             <div onclick="window.location.href='motherboard7.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -172,7 +249,10 @@
                 </div>
                 <h5 class="p-name">MSI X99A GAMING PRO CARBON LGA 2011-v3</h5>
                 <h4 class="p-price"> PKR 167,903</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="79"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
             <div onclick="window.location.href='motherboard8.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -186,7 +266,10 @@
                 </div>
                 <h5 class="p-name">ASUS Sabertooth Z170 S</h5>
                 <h4 class="p-price"> PKR 47,142</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="80"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third part-->
             <!--first-->
@@ -201,7 +284,10 @@
                 </div>
                 <h5 class="p-name">ASUS ROG Strix B250F GAMING LGA 1151</h5>
                 <h4 class="p-price"> PKR 33,099</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="81"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
             <div onclick="window.location.href='motherboard10.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -215,7 +301,10 @@
                 </div>
                 <h5 class="p-name">ASUS ROG Strix X390-E Gaming</h5>
                 <h4 class="p-price"> PKR 46,750</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="82"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
             <div onclick="window.location.href='motherboard11.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -229,7 +318,10 @@
                 </div>
                 <h5 class="p-name">ASUS ROG MAXIMUS XII APEX</h5>
                 <h4 class="p-price"> PKR 152,697</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="92"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
             <div onclick="window.location.href='motherboard12.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -243,7 +335,10 @@
                 </div>
                 <h5 class="p-name">GIgabyte X399 Arous Gaming 7</h5>
                 <h4 class="p-price"> PKR 212,899</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="83"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth part-->
             <!--first-->
@@ -258,7 +353,10 @@
                 </div>
                 <h5 class="p-name">ASUS ROG Strix B550-A Gaming</h5>
                 <h4 class="p-price"> PKR 47,104</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="84"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
             <div onclick="window.location.href='motherboard14.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -272,7 +370,10 @@
                 </div>
                 <h5 class="p-name">ASUS PRIME Z370-A LGA1151</h5>
                 <h4 class="p-price"> PKR 48,532</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="85"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
             <div onclick="window.location.href='motherboard15.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -286,7 +387,10 @@
                 </div>
                 <h5 class="p-name">ASUS Prime Z390-A Motherboard LGA1151</h5>
                 <h4 class="p-price"> PKR 57,953</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="86"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
             <div onclick="window.location.href='motherboard16.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -300,7 +404,10 @@
                 </div>
                 <h5 class="p-name">GIgabyte Z370 Arous Ultra Gaming 2.0</h5>
                 <h4 class="p-price"> PKR 68,234</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="87"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--Fifth part-->
             <!--first-->
@@ -315,7 +422,10 @@
                 </div>
                 <h5 class="p-name">ASUS ROG MAXIMUS Z690 FORMULA Motherboard</h5>
                 <h4 class="p-price"> PKR 344,599</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="88"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
             <div onclick="window.location.href='motherboard18.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -329,7 +439,10 @@
                 </div>
                 <h5 class="p-name">Asus ROG Maximus IX Extreme LGA 1151</h5>
                 <h4 class="p-price"> PKR 99,639</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="89"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
             <div onclick="window.location.href='motherboard19.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -343,7 +456,10 @@
                 </div>
                 <h5 class="p-name">Msi MPG intel Z490 Gamming</h5>
                 <h4 class="p-price"> PKR 76,799</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="90"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
             <div onclick="window.location.href='motherboard20.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -357,7 +473,10 @@
                 </div>
                 <h5 class="p-name">ASUS MAXIMUS VII FORMULA lGA1150</h5>
                 <h4 class="p-price"> PKR 137,037</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="91"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
 
         </div>
@@ -427,6 +546,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,63 @@
-<!doctype html>
+<?php
+@include 'config.php';
+
+$message = array(); // Initialize an empty array for messages
+
+// Check if the form was submitted
+if(isset($_POST['add_to_cart'])){
+    // Form submission logic
+    $product_id = 71; // Set the product ID to 3
+
+    // Fetch product data based on the provided product ID
+    $select_product = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$product_id'");
+
+    if(mysqli_num_rows($select_product) > 0){
+        $product_data = mysqli_fetch_assoc($select_product);
+
+        $product_name = $product_data['name'];
+        $product_price = $product_data['price'];
+        $product_image = $product_data['image'];
+        $product_quantity = 1;
+
+        // Check if the product is already in the cart
+        $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name'");
+
+        if(mysqli_num_rows($select_cart) > 0){
+            $message[] = 'Product already added to cart';
+        } else {
+            // Insert the product into the cart table
+            $insert_product = mysqli_query($conn, "INSERT INTO `cart` (name, price, image, quantity) VALUES ('$product_name', '$product_price', '$product_image', '$product_quantity')");
+            if($insert_product){
+                $message[] = 'Product added to cart successfully';
+
+                // If you want to store the data in another table, you can do so here
+                // For example, let's say you have a table named 'orders' to store order details
+                $insert_order = mysqli_query($conn, "INSERT INTO `orders` (product_id, product_name, product_price, product_image, quantity) VALUES ('$product_id', '$product_name', '$product_price', '$product_image', '$product_quantity')");
+                if($insert_order){
+                    $message[] = 'Order details stored successfully';
+                } else {
+                    $message[] = 'Error storing order details: ' . mysqli_error($conn); // Display MySQL error message
+                }
+            } else {
+                $message[] = 'Error adding product to cart: ' . mysqli_error($conn); // Display MySQL error message
+            }
+        }
+        
+        // Redirect to the same page to prevent form resubmission
+        header("Location: {$_SERVER['PHP_SELF']}");
+        exit();
+    } else {
+        $message[] = 'Product not found';
+    }
+}
+
+// Display messages
+if(isset($message)){
+    foreach($message as $msg){
+        echo '<div class="message">' . $msg . '</div>';
+    }
+}
+?><!doctype html>
 <html lang="en">
 
 <head>
@@ -10,24 +69,31 @@
     />
     <link rel="stylesheet" href="style1.css">
     <style>
-        .sproduct input {
-            width: 50px;
-            height: 40px;
-            padding-left: 10px;
-            font-size: 16px;
-            margin-right: 10px;
-        }
-        
-        .sproduct input:focus {
-            outline: none;
-        }
-        
-        .buy-btn {
-            background-color: coral;
-            opacity: 1;
-            transition: 0.3s all;
-        }
-    </style>
+            .sproduct input {
+                width: 50px;
+                height: 40px;
+                padding-left: 10px;
+                font-size: 16px;
+                margin-right: 10px;
+            }
+            
+            .sproduct input:focus {
+                outline: none;
+            }
+            
+            .buy-btn {
+                padding: 0px 20px;
+                min-width: 120px;
+                background-color: coral;
+                opacity: 1;
+                transition: 0.3s all;
+            }
+            
+            .icon img {
+                height: 55px;
+                width: 48px;
+            }
+        </style>
 </head>
 
 <body>
@@ -66,6 +132,7 @@
     </nav>
     <!--Product details-->
     <section class="container sproduct my-5 pt-5">
+    <form action="#" method="post">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
                 <img class="img-fluid w-100 pb-1" src="mainprodimg/pordimg3.jpg" id="MainImg" alt="">
@@ -74,13 +141,13 @@
                 <h6> Home / Featured Products</h6>
                 <h3 class="py-4">EVGA GeForce GTX TITAN 2</h3>
                 <h2>PKR 17,699</h2>
-                <input type="number" value="1">
-                <button class="buy-btn">Add to Cart</button>
+                <input type="hidden" name="product_id" value="71"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Details</h4>
                 <span>The EVGA GeForce GTX TITAN 2 is a high-end graphics card engineered for gamers and professionals who demand exceptional performance. With cutting-edge GPU technology and a substantial VRAM capacity, this card excels at handling the most demanding games and content creation tasks. It supports real-time ray tracing, delivering stunning visuals and realism. EVGA is known for its high-quality build and cooling solutions, ensuring efficient and quiet operation even under heavy workloads. If you're a serious gamer or content creator seeking the best in graphics performance, the GTX TITAN 2 is a formidable choice that guarantees top-tier performance and visuals.</span>
             </div>
         </div>
-
+        </form>
     </section>
     <!--Related products-->
     <section id="featured" class="my-5 pb-5">
@@ -217,6 +284,7 @@
     <script>
         var MainImg = document.getElementById('MainImg');
     </script>
+    <script src="js/script.js"></script> 
 </body>
 
 </html>

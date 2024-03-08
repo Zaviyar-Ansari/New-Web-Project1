@@ -1,4 +1,63 @@
-<!doctype html>
+<?php
+@include 'config.php';
+
+$message = array(); // Initialize an empty array for messages
+
+// Check if the form was submitted
+if(isset($_POST['add_to_cart'])){
+    // Form submission logic
+    $product_id = 78; // Set the product ID to 3
+
+    // Fetch product data based on the provided product ID
+    $select_product = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$product_id'");
+
+    if(mysqli_num_rows($select_product) > 0){
+        $product_data = mysqli_fetch_assoc($select_product);
+
+        $product_name = $product_data['name'];
+        $product_price = $product_data['price'];
+        $product_image = $product_data['image'];
+        $product_quantity = 1;
+
+        // Check if the product is already in the cart
+        $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name'");
+
+        if(mysqli_num_rows($select_cart) > 0){
+            $message[] = 'Product already added to cart';
+        } else {
+            // Insert the product into the cart table
+            $insert_product = mysqli_query($conn, "INSERT INTO `cart` (name, price, image, quantity) VALUES ('$product_name', '$product_price', '$product_image', '$product_quantity')");
+            if($insert_product){
+                $message[] = 'Product added to cart successfully';
+
+                // If you want to store the data in another table, you can do so here
+                // For example, let's say you have a table named 'orders' to store order details
+                $insert_order = mysqli_query($conn, "INSERT INTO `orders` (product_id, product_name, product_price, product_image, quantity) VALUES ('$product_id', '$product_name', '$product_price', '$product_image', '$product_quantity')");
+                if($insert_order){
+                    $message[] = 'Order details stored successfully';
+                } else {
+                    $message[] = 'Error storing order details: ' . mysqli_error($conn); // Display MySQL error message
+                }
+            } else {
+                $message[] = 'Error adding product to cart: ' . mysqli_error($conn); // Display MySQL error message
+            }
+        }
+        
+        // Redirect to the same page to prevent form resubmission
+        header("Location: {$_SERVER['PHP_SELF']}");
+        exit();
+    } else {
+        $message[] = 'Product not found';
+    }
+}
+
+// Display messages
+if(isset($message)){
+    foreach($message as $msg){
+        echo '<div class="message">' . $msg . '</div>';
+    }
+}
+?><!doctype html>
 <html lang="en">
 
 <head>
@@ -10,29 +69,31 @@
     />
     <link rel="stylesheet" href="style1.css">
     <style>
-        .sproduct input {
-            width: 50px;
-            height: 40px;
-            padding-left: 10px;
-            font-size: 16px;
-            margin-right: 10px;
-        }
-        
-        .sproduct input:focus {
-            outline: none;
-        }
-        
-        .buy-btn {
-            background-color: coral;
-            opacity: 1;
-            transition: 0.3s all;
-        }
-        
-        .icon img {
-            height: 55px;
-            width: 48px;
-        }
-    </style>
+            .sproduct input {
+                width: 50px;
+                height: 40px;
+                padding-left: 10px;
+                font-size: 16px;
+                margin-right: 10px;
+            }
+            
+            .sproduct input:focus {
+                outline: none;
+            }
+            
+            .buy-btn {
+                padding: 0px 20px;
+                min-width: 120px;
+                background-color: coral;
+                opacity: 1;
+                transition: 0.3s all;
+            }
+            
+            .icon img {
+                height: 55px;
+                width: 48px;
+            }
+        </style>
 </head>
 
 <body>
@@ -71,24 +132,26 @@
     </nav>
     <!--Product details-->
     <section class="container sproduct my-5 pt-5">
+    <form action="#" method="post">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid w-100 pb-1" src="accessories/motherboard/3534397929332088a93552e1c7e8fcf5.jpg" id="MainImg" alt="">
+                <img class="img-fluid w-100 pb-1" src="accessories/motherboard/560a5259c02570a35ea1e5db86e9287e.jpg" id="MainImg" alt="">
             </div>
             <div class="col-lg-6 col-md-12 col-12">
                 <h6> Home / Acessories / Motherboards</h6>
-                <h3 class="py-4">ASUS ROG Strix X390-E Gaming</h3>
-                <h2>PKR 46,750</h2>
-                <input type="number" value="1">
-                <button class="buy-btn">Add to Cart</button>
+                <h3 class="py-4">ASUS TUF Z270 Mark 1</h3>
+                <h2>PKR 73,960</h2>
+                <input type="hidden" name="product_id" value="78"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4> <img src="preduilticon/noun-motherboard-3140591.png" alt=""> <b><u>ASUS ROG Strix X390-E Gaming</u></b>
+                    <h4> <img src="preduilticon/noun-motherboard-3140591.png" alt=""> <b><u>ASUS TUF Z270 Mark 1</u></b>
                 </div>
-                <span>The ASUS ROG Strix X390-E Gaming motherboard is a high-performance ATX board designed for gaming enthusiasts. It features support for 9th and 10th Gen Intel Core processors, robust power delivery, and advanced cooling solutions. With customizable RGB lighting, PCIe 3.0 support, and SupremeFX audio, it delivers a premium gaming experience. Additionally, it offers a range of connectivity options, including WiFi 6, Bluetooth 5.0, and ample USB ports for enhanced versatility.</span>
+                <span>
+                    The ASUS TUF Z270 Mark 1 is a durable and feature-rich motherboard built on the Intel Z270 chipset. With a focus on reliability and toughness, it includes TUF components and an armored design for enhanced durability. Supporting 6th and 7th generation Intel Core processors, it offers advanced cooling solutions, USB 3.1, and ASUS Aura Sync for customizable RGB lighting. This motherboard is suitable for users looking for a stable and resilient platform for their gaming or productivity setups. </span>
             </div>
         </div>
-
+        </form>
     </section>
     <!--Related products-->
     <section id="featured" class="my-5 pb-5">
@@ -225,12 +288,8 @@
     <script>
         var MainImg = document.getElementById('MainImg');
     </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
 
-</html>
-
-</html>
-
-</html>
