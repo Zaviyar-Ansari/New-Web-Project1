@@ -145,7 +145,7 @@ if(isset($message)){
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u></u></b></h4>
+                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u>Apacer DDR4 DIMM 3000-16 16GB OC Blade Fire-Red</u></b></h4>
                 </div>
                 <span>The Apacer DDR4 DIMM 3000-16 16GB OC Blade Fire-Red RAM, a premium memory module that pushes the boundaries of performance and style. Featuring a striking fire-red design, this RAM module not only enhances your system's aesthetics but also delivers unparalleled speed and efficiency. With a capacity of 16GB and overclocking capabilities, it ensures smooth multitasking and blazing-fast performance for gaming, content creation, and more. Elevate your setup to new heights with the Apacer DDR4 DIMM 3000-16 16GB OC Blade Fire-Red RAM, where innovation meets stunning design for an unforgettable computing experience.
 

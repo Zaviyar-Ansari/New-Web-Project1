@@ -145,7 +145,7 @@ if(isset($message)){
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u></u></b></h4>
+                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u>XPG Spectrix D41 DDR4 RGB</u></b></h4>
                 </div>
                 <span>The XPG Spectrix D41 DDR4 RGB RAM, a vibrant and high-performance memory solution for your gaming rig or workstation. With its eye-catching RGB lighting effects, this RAM module adds a touch of style to your setup while delivering exceptional performance. Boasting DDR4 technology, it ensures fast and reliable multitasking capabilities for smooth gaming experiences and intensive tasks. Elevate your system's aesthetics and performance with the XPG Spectrix D41 DDR4 RGB RAM, making every moment in your digital realm more immersive and exhilarating.
 

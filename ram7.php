@@ -145,7 +145,7 @@ if(isset($message)){
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u></u></b></h4>
+                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u>Corsarir 8GB DDR3 SDRAM</u></b></h4>
                 </div>
                 <span>The Corsair 8GB DDR3 SDRAM, a dependable solution for enhancing your computer's performance. With 8GB of memory, enjoy smoother multitasking and improved responsiveness for everyday computing tasks. Designed by Corsair, a trusted name in computer components, this DDR3 SDRAM offers reliability and quality at an affordable price. Upgrade your system without breaking the bank and experience improved speed and efficiency with Corsair 8GB DDR3 SDRAM.</span>
 

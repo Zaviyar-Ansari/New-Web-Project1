@@ -135,7 +135,7 @@ if(isset($message)){
         <div class="row mx-auto container">
             <!--first part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/0dedd143eb36ab2b4d35d9dbe70adce1.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -152,7 +152,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram2.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/1cb05a802346af0347ce55b6811485a3.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -169,7 +169,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram3.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/2d3d91afbdd80337a2de0435591064d2.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -186,7 +186,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram4.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/2e133aa9170100d2bbe42e474b43c504.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -204,7 +204,7 @@ if(isset($message)){
             </div>
             <!--Second part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram5.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/26c664d7939ec66eefbb292aa4d8974e.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -221,7 +221,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram6.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/62e2b916058482fb0f273eb886d13ccc.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -238,7 +238,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram7.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/306c5cc8dadb524b141eabb791a86167.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -255,7 +255,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram8.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/4517a7ccd6470828d4fc5171e38e4fb8.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -273,7 +273,7 @@ if(isset($message)){
             </div>
             <!--third part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram9.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/9983efee6324953d15c4c80fcbc10c8d.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -290,7 +290,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram10.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/a3c9880046febdb42748879becd68b39.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -307,7 +307,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram11.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/a8e7fcc2ed1bf7b1b8cf88480f255a1d.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -324,7 +324,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram12.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/ab0fd4dd3340ab6abbd14400508ac972.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -342,7 +342,7 @@ if(isset($message)){
             </div>
             <!--forth part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram13.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/b67f11909b85a47722da3119a364746b.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -359,7 +359,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram14.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/b560018f8e15b57ed064f7046c601352.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -376,7 +376,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram15.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/ddb953074707e95f1e7594e05bd2717a.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -393,7 +393,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram16.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/edf9da7dc16303c8d3b0a3485e50f01c.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -411,7 +411,7 @@ if(isset($message)){
             </div>
             <!--Fifth part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram17.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/faaa29675440a653c684c4ff15a1e990.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -428,7 +428,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram18.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/faf1026defdd572731867c7942dc9e7b.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -445,7 +445,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram19.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/fc152c4c24e55e9d6dcada28f7a174ff.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -462,7 +462,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ram20.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ram/ff112b052a759091678bb5a42d204b38.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>

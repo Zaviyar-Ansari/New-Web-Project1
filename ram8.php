@@ -145,7 +145,7 @@ if(isset($message)){
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u></u></b></h4>
+                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u>Corsair Dominator Platinum Series 16GB</u></b></h4>
                 </div>
                 <span>The Corsair Dominator Platinum Series 16GB RAM, a premium choice for high-performance computing. With its sleek design and impressive 16GB capacity, this RAM module delivers unparalleled speed and reliability. Engineered for enthusiasts and professionals, it ensures smooth multitasking and seamless gaming experiences. Elevate your system's performance to the next level with the Corsair Dominator Platinum Series 16GB RAM.</span>
 

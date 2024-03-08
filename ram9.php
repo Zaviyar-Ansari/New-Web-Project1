@@ -145,7 +145,7 @@ if(isset($message)){
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u></u></b></h4>
+                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u>OLOy DDR4 RAM 16GB</u></b></h4>
                 </div>
                 <span>The OLOy DDR4 RAM 16GB, a budget-friendly yet high-quality memory solution for your computing needs. With its 16GB capacity, this RAM module offers sufficient space for multitasking and demanding applications. Engineered for efficiency and reliability, it ensures smooth performance at an affordable price. Upgrade your system without breaking the bank and experience improved speed and responsiveness with OLOy DDR4 RAM 16GB.</span>
 

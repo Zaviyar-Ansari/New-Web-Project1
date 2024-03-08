@@ -6,7 +6,7 @@ $message = array(); // Initialize an empty array for messages
 // Check if the form was submitted
 if(isset($_POST['add_to_cart'])){
     // Form submission logic
-    $product_id = 132; // Set the product ID to 3
+    $product_id = 139; // Set the product ID to 3
 
     // Fetch product data based on the provided product ID
     $select_product = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$product_id'");
@@ -135,26 +135,19 @@ if(isset($message)){
     <form action="#" method="post">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid w-100 pb-1" src="accessories/ram/faf1026defdd572731867c7942dc9e7b.jpg" id="MainImg" alt="">
+                <img class="img-fluid w-100 pb-1" src="accessories/graphiccard/3013b150453e4212c4713c8827945934.jpg" id="MainImg" alt="">
             </div>
             <div class="col-lg-6 col-md-12 col-12">
-                <h6> Home / Acessories / RAM</h6>
-                <h3 class="py-4">T-Force Xcalibur RGB DDR4 16GB</h3>
-                <h2>PKR 20,500</h2>
-                <input type="hidden" name="product_id" value="132"> <!-- Set the product ID -->
+                <h6> Home / Acessories / Graphic Cards</h6>
+                <h3 class="py-4">ASUS ROG Strix GeForce RTX 4080</h3>
+                <h2>PKR 412,543</h2>
+                <input type="hidden" name="product_id" value="139"> <!-- Set the product ID -->
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u>T-Force Xcalibur RGB DDR4 16GB</u></b></h4>
+                    <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>ASUS ROG Strix GeForce RTX 4080</u></b>
                 </div>
-                <span>The T-Force Xcalibur RGB DDR4 16GB RAM, a dynamic memory solution designed to enhance both performance and aesthetics in your system. With its vibrant RGB lighting and sleek design, this RAM module adds flair to your setup while delivering exceptional performance. Boasting a capacity of 16GB, it ensures smooth multitasking and responsiveness for gaming, content creation, and more. Elevate your rig's visual appeal and performance with the T-Force Xcalibur RGB DDR4 16GB RAM, where style meets functionality for an immersive computing experience.
-
-
-
-
-
-</span>
-
+                <span></span>
             </div>
         </div>
         </form>

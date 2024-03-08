@@ -145,7 +145,7 @@ if(isset($message)){
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u></u></b></h4>
+                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u>PNY 16\gb XLR8 Gamming DDR4</u></b></h4>
                 </div>
                 <span>The PNY XLR8 Gaming DDR4 RAM, a powerhouse upgrade for your gaming rig. With 16GB of memory, experience lightning-fast performance and seamless multitasking during intense gaming sessions. Designed to enhance your gaming experience without breaking the bank, the XLR8 Gaming DDR4 delivers reliable performance at an affordable price. Elevate your gameplay and conquer the virtual battlefield with PNY XLR8 Gaming DDR4.</span>
 

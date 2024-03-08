@@ -145,7 +145,7 @@ if(isset($message)){
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u></u></b></h4>
+                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u>TOUGHRAM Z-ONE Memory DDR4</u></b></h4>
                 </div>
                 <span>The TOUGHRAM Z-ONE Memory DDR4, a robust and high-performance RAM module designed to meet the demands of modern computing. With its durable construction and reliable performance, this memory module ensures seamless multitasking and smooth gaming experiences. Featuring DDR4 technology, it offers fast speeds and efficient operation for enhanced productivity and gaming sessions. Elevate your system's performance with the TOUGHRAM Z-ONE Memory DDR4 and experience the power of uncompromising reliability and speed.
 

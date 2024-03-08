@@ -145,7 +145,7 @@ if(isset($message)){
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u></u></b></h4>
+                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u>HyperX Beast 16GB DDR3</u></b></h4>
                 </div>
                 <span>The HyperX Beast 16GB DDR3 RAM, a powerful upgrade for your system's performance needs. With its generous 16GB capacity, this RAM module provides ample space for seamless multitasking and enhanced gaming experiences. Designed with high-performance computing in mind, it delivers lightning-fast speeds and reliable performance. Elevate your gaming or productivity tasks with the HyperX Beast 16GB DDR3 RAM, ensuring smoother operations and improved efficiency.
 

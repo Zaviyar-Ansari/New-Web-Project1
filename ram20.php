@@ -145,7 +145,7 @@ if(isset($message)){
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u></u></b></h4>
+                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u>Corsari VENDEANCE RGB PRO 16GB DDR4</u></b></h4>
                 </div>
                 <span>The Corsair VENGEANCE RGB PRO 16GB DDR4 RAM, a dynamic memory module designed to elevate both performance and aesthetics in your system. With vibrant RGB lighting and a sleek design, this RAM adds a touch of style to your setup while delivering exceptional performance. Boasting a capacity of 16GB, it ensures smooth multitasking and responsiveness for gaming, content creation, and more. Upgrade your system with the Corsair VENGEANCE RGB PRO 16GB DDR4 RAM and experience the perfect blend of style and performance for an immersive computing experience.
 

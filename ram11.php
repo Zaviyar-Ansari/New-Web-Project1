@@ -145,7 +145,7 @@ if(isset($message)){
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u></u></b></h4>
+                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u>Corsair VENGEANCE LED 16GB DDR4</u></b></h4>
                 </div>
                 <span>The Corsair VENGEANCE LED 16GB DDR4 RAM, a blend of style and performance for your computing setup. With its vibrant LED lighting and sleek design, this RAM module adds flair to your system while delivering exceptional performance. Boasting a capacity of 16GB, it ensures smooth multitasking and responsiveness for demanding tasks and gaming sessions. Elevate your rig's aesthetics and performance with the Corsair VENGEANCE LED 16GB DDR4 RAM, making every computing experience more immersive and efficient.</span>
 

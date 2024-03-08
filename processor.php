@@ -135,7 +135,7 @@ if(isset($message)){
         <div class="row mx-auto container">
             <!--first part-->
             <!--first-->
-            <div onclick="window.location.href='processor1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/3d05d51cc87c6c6d23b8a0546b0a7919.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -152,7 +152,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='processor2.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor2.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/7ff8379604c6f1457ffc25c965c87987.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -169,7 +169,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='processor3.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor3.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/89f4962ee2d445c76ab32514829b5297.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -186,7 +186,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='processor4.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor4.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/124ee54e460d17b9e49daa4795d0d72c.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -204,7 +204,7 @@ if(isset($message)){
             </div>
             <!--Second part-->
             <!--first-->
-            <div onclick="window.location.href='processor5.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor5.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/images (1).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -221,7 +221,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='processor6.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor6.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/320df5c3540aec0eed0f714fd8e2b35a.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -238,7 +238,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='processor7.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor7.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/919597ed66f9cb3ff6c812b64dad08f2.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -255,7 +255,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='processor8.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor8.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/images (14).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -273,7 +273,7 @@ if(isset($message)){
             </div>
             <!--third part-->
             <!--first-->
-            <div onclick="window.location.href='processor9.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor9.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/a72cec11bbca7d01a1656168a2bd545c.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -290,7 +290,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='processor10.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor10.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/dd19d2dd4bc915cddd851ea343530c11.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -307,7 +307,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='processor11.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor11.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/images (3).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -324,7 +324,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='processor12.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor12.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/images (4).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -342,7 +342,7 @@ if(isset($message)){
             </div>
             <!--forth part-->
             <!--first-->
-            <div onclick="window.location.href='processor13.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor13.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/images (5).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -359,7 +359,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='processor14.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor14.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/images (6).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -376,7 +376,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='processor15.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor15.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/images (7).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -393,7 +393,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='processor16.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor16.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/images (8).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -411,7 +411,7 @@ if(isset($message)){
             </div>
             <!--Fifth part-->
             <!--first-->
-            <div onclick="window.location.href='processor17.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor17.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/images (9).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -428,7 +428,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='processor18.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor18.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/images (10).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -445,7 +445,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='processor19.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor19.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/images (11).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -462,7 +462,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='processor20.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='processor20.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/processor/images (12).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>

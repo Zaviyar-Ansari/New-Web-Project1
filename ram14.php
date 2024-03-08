@@ -145,7 +145,7 @@ if(isset($message)){
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u></u></b></h4>
+                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u>TEAMGROUP T-FORCE Delta RGB DDR5</u></b></h4>
                 </div>
                 <span>The TEAMGROUP T-FORCE Delta RGB DDR5 RAM, a cutting-edge memory solution designed to elevate your gaming and computing experience. With its striking RGB lighting and sleek design, this RAM module adds flair to your setup while delivering top-tier performance. Powered by DDR5 technology, it offers lightning-fast speeds and improved efficiency for seamless multitasking and intense gaming sessions. Upgrade your system with the TEAMGROUP T-FORCE Delta RGB DDR5 RAM and immerse yourself in a world of unparalleled performance and aesthetics.
 

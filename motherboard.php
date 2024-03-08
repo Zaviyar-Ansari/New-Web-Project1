@@ -135,7 +135,7 @@ if(isset($message)){
         <div class="row mx-auto container">
             <!--first part-->
             <!--first-->
-            <div onclick="window.location.href='motherboard1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/8abe606b5214ab9a5755cbd4646c6d44.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -152,7 +152,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='motherboard2.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard2.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/3badb6ddcc1243b26595029c5ae5c7f0.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -169,7 +169,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='motherboard3.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard3.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/8aaf5efc13625cb94d6015c71704a50d.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -186,7 +186,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='motherboard4.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard4.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/70d56d74b053ab73beef29247a3985cd.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -204,7 +204,7 @@ if(isset($message)){
             </div>
             <!--Second part-->
             <!--first-->
-            <div onclick="window.location.href='motherboard5.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard5.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/288a76fc09368c8caacbc6a836a734d0.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -221,7 +221,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='motherboard6.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard6.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/560a5259c02570a35ea1e5db86e9287e.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -238,7 +238,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='motherboard7.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard7.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/7179cd7ef82ce1645bae70580b175f35.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -255,7 +255,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='motherboard8.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard8.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/32282e9b761a490b189f29bc0440b72e.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -273,7 +273,7 @@ if(isset($message)){
             </div>
             <!--third part-->
             <!--first-->
-            <div onclick="window.location.href='motherboard9.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard9.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/41639c89374811a9ba2fb8fa5da790e9.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -290,7 +290,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='motherboard10.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard10.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/3534397929332088a93552e1c7e8fcf5.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -307,7 +307,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='motherboard11.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard11.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/a532bda3297410aee3ef138a2fb869a9.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -324,7 +324,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='motherboard12.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard12.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/b2e0c4efe3e3c9bf8d995f728117a252.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -342,7 +342,7 @@ if(isset($message)){
             </div>
             <!--forth part-->
             <!--first-->
-            <div onclick="window.location.href='motherboard13.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard13.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/b5fc45aa955ac390a09974ca1bcf927d.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -359,7 +359,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='motherboard14.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard14.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/c7b336d7f3373244ef92c0fc590c6940.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -376,7 +376,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='motherboard15.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard15.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/ecc3e77c8eb05b002ec5d0f67301e855.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -393,7 +393,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='motherboard16.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard16.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/GIGABYTE Outs Aorus Z370 Ultra Gaming 2_0 with Improved VRM.jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -411,7 +411,7 @@ if(isset($message)){
             </div>
             <!--Fifth part-->
             <!--first-->
-            <div onclick="window.location.href='motherboard17.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard17.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/Make it your own_ The ASUS 3D Printing Project (1).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -428,7 +428,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='motherboard18.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard18.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/Make it your own_ The ASUS 3D Printing Project 2.jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -445,7 +445,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='motherboard19.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard19.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/MSI Releases Z490 Chipset Motherboards For Intel 10th Gen CPUs.jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -462,7 +462,7 @@ if(isset($message)){
                     </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='motherboard20.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='motherboard20.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/motherboard/This motherboard looks sick.jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>

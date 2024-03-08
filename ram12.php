@@ -145,7 +145,7 @@ if(isset($message)){
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u></u></b></h4>
+                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u>Corsair DOMINATOR PLATINUM RGB 32GB DDR5</u></b></h4>
                 </div>
                 <span>The Corsair DOMINATOR PLATINUM RGB 32GB DDR5 RAM, the pinnacle of performance and style for your high-end computing needs. With its stunning RGB lighting and sleek design, this RAM module not only enhances your system's aesthetics but also delivers unparalleled speed and responsiveness. Boasting a massive 32GB capacity and DDR5 technology, it ensures seamless multitasking and blazing-fast performance for gaming, content creation, and more. Elevate your rig to new heights with the Corsair DOMINATOR PLATINUM RGB 32GB DDR5 RAM, where cutting-edge technology meets exquisite design.</span>
 

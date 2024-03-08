@@ -145,7 +145,7 @@ if(isset($message)){
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u></u></b></h4>
+                    <h4><img src="preduilticon/noun-ram-1724288.png" alt=""> <b><u>Kingston HyperX Predator DDR4 RGB 16GB</u></b></h4>
                 </div>
                 <span>The Kingston HyperX Predator DDR4 RGB 16GB RAM, a premium memory module that combines stunning RGB lighting with high-performance computing. With its sleek design and vibrant RGB effects, this RAM enhances the aesthetics of your system while delivering top-notch performance. Boasting a capacity of 16GB, it ensures smooth multitasking and responsiveness for gaming, content creation, and more. Elevate your setup to the next level with the Kingston HyperX Predator DDR4 RGB 16GB RAM, where style meets unparalleled performance for an immersive computing experience.
 
