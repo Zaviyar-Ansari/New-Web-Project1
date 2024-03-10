@@ -147,7 +147,7 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>EVGA GeForce GTX 1060</u></b>
                 </div>
-                <span></span>
+                <span>The EVGA GeForce GTX 1060 is a mid-range graphics card tailored for gaming enthusiasts seeking solid performance at an affordable price point. Featuring NVIDIA's GeForce GTX 1060 GPU, it delivers smooth and responsive gameplay at 1080p resolution, making it ideal for a wide range of gaming titles. With its compact design and efficient cooling solution, this graphics card is suitable for small form factor systems and moderate gaming setups. Upgrade your gaming experience with the EVGA GeForce GTX 1060, offering reliable performance and affordability for your gaming needs.</span>
             </div>
         </div>
         </form>

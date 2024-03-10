@@ -76,7 +76,7 @@
         <div class="row mx-auto container">
             <!--first part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/download.jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -90,7 +90,7 @@
                 <button class="buy-btn ">Buy Now</button>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/61nm2nZsccL._AC_UF894,1000_QL80_.jpg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -104,7 +104,7 @@
                 <button class="buy-btn ">Buy Now</button>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (29).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -118,7 +118,7 @@
                 <button class="buy-btn ">Buy Now</button>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (30).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -133,7 +133,7 @@
             </div>
             <!--Second part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (31).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -142,12 +142,12 @@
                     <i class="fa-solid fa-star "></i>
                     <i class="fa-regular fa-star "></i>
                 </div>
-                <h5 class="p-name ">DIY Liquid Cooling 13,114</h5>
+                <h5 class="p-name ">DIY Liquid Cooling</h5>
                 <h4 class="p-price "> PKR 30,474</h4>
                 <button class="buy-btn ">Buy Now</button>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (32).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -161,7 +161,7 @@
                 <button class="buy-btn ">Buy Now</button>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (33).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -175,7 +175,7 @@
                 <button class="buy-btn ">Buy Now</button>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (34).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -190,7 +190,7 @@
             </div>
             <!--third part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (35).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -204,7 +204,7 @@
                 <button class="buy-btn ">Buy Now</button>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (36).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -218,7 +218,7 @@
                 <button class="buy-btn ">Buy Now</button>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (37).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -232,7 +232,7 @@
                 <button class="buy-btn ">Buy Now</button>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (38).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -247,7 +247,7 @@
             </div>
             <!--forth part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (39).jpeg " alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -261,7 +261,7 @@
                 <button class="buy-btn ">Buy Now</button>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (40).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -275,7 +275,7 @@
                 <button class="buy-btn ">Buy Now</button>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (41).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>

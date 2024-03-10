@@ -147,7 +147,13 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>NVIDIA GT 710 Grpahic Card</u></b>
                 </div>
-                <span></span>
+                <span>The NVIDIA GT 710 Graphics Card is an entry-level solution offering basic graphics processing capabilities at an affordable price point. While not designed for high-performance gaming or intensive graphical tasks, it provides reliable performance for everyday computing needs. Its compact size and low power consumption make it suitable for upgrading older systems or adding dual-monitor support to existing setups. Featuring NVIDIA technology, it delivers smooth display output for multimedia playback, web browsing, and light gaming. Upgrade your system with the NVIDIA GT 710 Graphics Card for improved graphics performance and versatility without breaking the bank.
+
+
+
+
+
+</span>
             </div>
         </div>
         </form>

@@ -147,7 +147,13 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>ASUS GeForce RTX 2080 O8G ROG STRIX OC</u></b>
                 </div>
-                <span></span>
+                <span>
+The ASUS GeForce RTX 2080 O8G ROG STRIX OC is a high-performance graphics card engineered for gaming enthusiasts and content creators seeking top-tier performance. Featuring NVIDIA's GeForce RTX 2080 GPU, it delivers exceptional graphics rendering capabilities, ensuring smooth gameplay and immersive visuals in the latest AAA gaming titles. The ROG STRIX OC edition boasts ASUS's advanced cooling solution, providing efficient heat dissipation for optimal performance under heavy loads. With its 8GB of GDDR6 memory and advanced ray tracing technology, this graphics card offers unparalleled realism and detail in gaming environments. Elevate your gaming setup with the ASUS GeForce RTX 2080 O8G ROG STRIX OC, delivering unrivaled performance and visual fidelity for the most demanding gaming experiences.
+
+
+
+
+</span>
             </div>
         </div>
         </form>

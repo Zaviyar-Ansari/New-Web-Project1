@@ -148,7 +148,13 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>GIGAByTE GeForce RTX 2080 SUPER Jet</u></b>
                 </div>
-                <span></span>
+                <span>
+The GIGABYTE GeForce RTX 2080 SUPER Jet is a high-performance graphics card designed for gaming enthusiasts and content creators seeking exceptional performance and visuals. Featuring NVIDIA's GeForce RTX 2080 SUPER GPU, it delivers smooth gameplay and immersive visuals in the latest AAA gaming titles. The Jet variant may feature GIGABYTE's custom cooling solution for efficient heat dissipation and optimal performance under heavy loads. With 8GB of GDDR6 memory, this graphics card offers ample VRAM for high-resolution gaming and multitasking. Elevate your gaming setup with the GIGABYTE GeForce RTX 2080 SUPER Jet, providing top-tier performance and reliability for your gaming needs.
+
+
+
+
+</span>
             </div>
         </div>
         </form>

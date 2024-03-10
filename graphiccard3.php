@@ -147,7 +147,7 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>XFX AMD Radeon RX 580 GTS XXX Edition</u></b>
                 </div>
-                <span></span>
+                <span>The XFX AMD Radeon RX 580 GTS XXX Edition is a powerful graphics card designed to deliver exceptional gaming performance and immersive visuals. Equipped with AMD's Radeon RX 580 GPU, it offers smooth and responsive gameplay across a wide range of gaming titles. The XXX Edition features XFX's custom cooling solution, ensuring efficient heat dissipation and quiet operation even under heavy loads. With 8GB of GDDR5 memory, this graphics card provides ample VRAM for high-resolution gaming and multitasking. Upgrade your gaming setup with the XFX Radeon RX 580 GTS XXX Edition for an unparalleled gaming experience at a competitive price.</span>
             </div>
         </div>
         </form>

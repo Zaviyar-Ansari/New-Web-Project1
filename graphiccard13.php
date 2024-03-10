@@ -147,7 +147,13 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>ZOTAC GeForce GTX 1070 Ti AMP Edition</u></b>
                 </div>
-                <span></span>
+                <span>The ZOTAC GeForce GTX 1070 Ti AMP Edition is a powerful graphics card designed for gaming enthusiasts seeking exceptional performance and value. With its NVIDIA GeForce GTX 1070 Ti GPU, it delivers smooth and responsive gameplay at high resolutions, making it ideal for demanding gaming titles. The AMP Edition features overclocked settings for enhanced performance, providing extra power for intensive gaming environments. With 8GB of GDDR5 memory, this graphics card offers ample VRAM for high-resolution gaming and multitasking. Elevate your gaming experience with the ZOTAC GeForce GTX 1070 Ti AMP Edition, offering outstanding performance and value for your gaming needs.
+
+
+
+
+
+</span>
             </div>
         </div>
         </form>

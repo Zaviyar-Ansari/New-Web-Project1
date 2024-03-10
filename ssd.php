@@ -1,4 +1,63 @@
-<!doctype html>
+<?php
+@include 'config.php';
+
+$message = array(); // Initialize an empty array for messages
+
+// Check if the form was submitted
+if(isset($_POST['add_to_cart'])){
+    // Form submission logic
+    $product_id = $_POST['product_id']; // Get the product ID from the form
+
+    // Fetch product data based on the provided product ID
+    $select_product = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$product_id'");
+
+    if(mysqli_num_rows($select_product) > 0){
+        $product_data = mysqli_fetch_assoc($select_product);
+
+        $product_name = $product_data['name'];
+        $product_price = $product_data['price'];
+        $product_image = $product_data['image'];
+        $product_quantity = 1;
+
+        // Check if the product is already in the cart
+        $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name'");
+
+        if(mysqli_num_rows($select_cart) > 0){
+            $message[] = 'Product already added to cart';
+        } else {
+            // Insert the product into the cart table
+            $insert_product = mysqli_query($conn, "INSERT INTO `cart` (name, price, image, quantity) VALUES ('$product_name', '$product_price', '$product_image', '$product_quantity')");
+            if($insert_product){
+                $message[] = 'Product added to cart successfully';
+
+                // If you want to store the data in another table, you can do so here
+                // For example, let's say you have a table named 'orders' to store order details
+                $insert_order = mysqli_query($conn, "INSERT INTO `orders` (product_id, product_name, product_price, product_image, quantity) VALUES ('$product_id', '$product_name', '$product_price', '$product_image', '$product_quantity')");
+                if($insert_order){
+                    $message[] = 'Order details stored successfully';
+                } else {
+                    $message[] = 'Error storing order details: ' . mysqli_error($conn); // Display MySQL error message
+                }
+            } else {
+                $message[] = 'Error adding product to cart: ' . mysqli_error($conn); // Display MySQL error message
+            }
+        }
+        
+        // Redirect to the same page to prevent form resubmission
+        header("Location: {$_SERVER['PHP_SELF']}");
+        exit();
+    } else {
+        $message[] = 'Product not found';
+    }
+}
+
+// Display messages
+if(isset($message)){
+    foreach($message as $msg){
+        echo '<div class="message">' . $msg . '</div>';
+    }
+}
+?><!doctype html>
 <html lang="en">
 
 <head>
@@ -76,7 +135,7 @@
         <div class="row mx-auto container">
             <!--first part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/0a6b2bbfd57762735a7474e7bb55cb95.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -87,10 +146,13 @@
                 </div>
                 <h5 class="p-name">Crusial MX500 250GB SSD 2.5inch</h5>
                 <h4 class="p-price"> PKR 10,135</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="153"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd2.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/3f7880f8ab21c9d757f8d8a353a6e100.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -101,10 +163,13 @@
                 </div>
                 <h5 class="p-name">Lexar Pro NM800 SSD 1TB PCIe Gen4 NVMe M.2</h5>
                 <h4 class="p-price"> PKR 2,816,144</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="154"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd3.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/04d539030daef35ef77cfc44ee5dc1d6.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -115,10 +180,13 @@
                 </div>
                 <h5 class="p-name">Corsair Force Series MP510 1920GB M.2 SSD</h5>
                 <h4 class="p-price"> PKR 32,382</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="155"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd4.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/9bd9e0936d1433aa822d4088ce37b92c.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -129,11 +197,14 @@
                 </div>
                 <h5 class="p-name">Samsung 950 PRO NVMe 512GB SSD</h5>
                 <h4 class="p-price"> PKR 73,899</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="156"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--Second part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd5.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/9fbf80c80c6c195e8a53b417e8ba824b.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -144,10 +215,13 @@
                 </div>
                 <h5 class="p-name">Corsair MP600 PRO XT 1TB M.2 NVMe PCIe Gen.4x4 SSD</h5>
                 <h4 class="p-price"> PKR 21,118</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="157"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd6.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/24eee82924c6f030202050ec8ec74a39.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -158,10 +232,13 @@
                 </div>
                 <h5 class="p-name">Portable SSD T7 TOUCH USB 3.2 1TB</h5>
                 <h4 class="p-price"> PKR 29,500</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="158"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd7.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/86f19eb0d1e3995d0147ef4f7aa3d82a.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -172,10 +249,13 @@
                 </div>
                 <h5 class="p-name">Super Talent DX3 M.2 SSD 240GB</h5>
                 <h4 class="p-price"> PKR 6,195</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="159"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd8.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/337e659e991a9b3c51a6344e21294dd9.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -186,11 +266,14 @@
                 </div>
                 <h5 class="p-name">Synology M2D20 M.2 Adapter Card</h5>
                 <h4 class="p-price"> PKR 47,871</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="160"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd9.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/5311d82d9635d747afdb4b21148963a9.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -201,10 +284,13 @@
                 </div>
                 <h5 class="p-name">Samsung 980 SSD 1TB PCIe 3.0x4 NVMe M.2 2280</h5>
                 <h4 class="p-price"> PKR 19,679</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="161"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd10.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/32543f6279d557ad411d1116cf7744e9.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -215,10 +301,13 @@
                 </div>
                 <h5 class="p-name">XPC GAMMING S70 BlADE 1TB PCIe Gen4x4 M.2 2280</h5>
                 <h4 class="p-price"> PKR 32,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="162"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd11.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/403139e72270fb7e074fc76904b3500f.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -229,10 +318,13 @@
                 </div>
                 <h5 class="p-name">MyDigitalSSD BPX 80mm (2280) M.2 PCi 480GB</h5>
                 <h4 class="p-price"> PKR 21,805</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="163"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd12.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/789104b4d1de184a0004d250e460b6e2.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -243,11 +335,14 @@
                 </div>
                 <h5 class="p-name">KingSPec N80-120GB SSD M.2 NGFF</h5>
                 <h4 class="p-price"> PKR 21,121</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="164"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd13.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/2811695f16d0ba053541ea46d74a662d.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -258,10 +353,13 @@
                 </div>
                 <h5 class="p-name">Samsung SSD 1TB PM9A1 NVMe PCIe 4.0 </h5>
                 <h4 class="p-price"> PKR 26,316</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="165"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd14.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/612179742fb138fb76430ea4f528b4fa.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -272,10 +370,13 @@
                 </div>
                 <h5 class="p-name">ADATA Premier Pro SP900 128GB 2.5 inch SATA</h5>
                 <h4 class="p-price"> PKR 65,196</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="166"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd15.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/a2afb1bae9b29062fa8cbab5f905242d.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -286,10 +387,13 @@
                 </div>
                 <h5 class="p-name">Samsung 970 PRO NVMe M.2 SSD 512GB</h5>
                 <h4 class="p-price"> PKR 45,099</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="167"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd16.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/acecd10f075c7de1dcdef3135d3fda4b.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -300,11 +404,14 @@
                 </div>
                 <h5 class="p-name">Force Series Gen.4 PCIe MP600 1TB NVMe M.2 SSD</h5>
                 <h4 class="p-price"> PKR 34,900</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="168"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--Fifth part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd17.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/caba0ce0c764c440f58a9436a56c4448.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -315,10 +422,13 @@
                 </div>
                 <h5 class="p-name">Force Series Gen.4 PCIe MP600 1TB NVMe M.2 SSD</h5>
                 <h4 class="p-price"> PKR 21,990</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="169"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd18.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/d79a51296f840f3965d977e3a850a20f.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -329,10 +439,13 @@
                 </div>
                 <h5 class="p-name">WD Blue SATA SSD M.2 2280 PC SSD 1TB</h5>
                 <h4 class="p-price"> PKR 21,118</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="170"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd19.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/eb2df4051b8170357456bc030e6b37c5.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -343,10 +456,13 @@
                 </div>
                 <h5 class="p-name">Samsung 960 EVO M.2 2TB </h5>
                 <h4 class="p-price"> PKR 166,149,68</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="171"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='ssd20.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/ssd/fb0f44c1ce6add2687cc67eb87d7d3cc.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -357,7 +473,10 @@
                 </div>
                 <h5 class="p-name">Kingstone NV2 PCIe 4.0 NVMe M.2 250GB</h5>
                 <h4 class="p-price"> PKR 6,700</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="172"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
 
         </div>
@@ -427,6 +546,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

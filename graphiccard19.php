@@ -147,7 +147,12 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>EVGA GeForce GTX 1080 Ti SC Hydro Copper</u></b>
                 </div>
-                <span></span>
+                <span>The EVGA GeForce GTX 1080 Ti SC Hydro Copper is a high-performance graphics card designed for gaming enthusiasts and content creators seeking top-tier performance and reliability. Featuring NVIDIA's GeForce GTX 1080 Ti GPU, it delivers exceptional graphics rendering capabilities, ensuring smooth gameplay and immersive visuals in the latest gaming titles. The SC Hydro Copper edition features EVGA's precision-engineered cooling solution, providing efficient heat dissipation and optimal performance under heavy loads. With its 11GB of GDDR5X memory, this graphics card offers ample VRAM for high-resolution gaming and multitasking. Elevate your gaming setup with the EVGA GeForce GTX 1080 Ti SC Hydro Copper, providing unparalleled performance and reliability for your gaming needs.
+
+
+
+
+</span>
             </div>
         </div>
         </form>

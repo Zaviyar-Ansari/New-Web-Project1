@@ -76,7 +76,7 @@
         <div class="row mx-auto container">
             <!--first part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/fan-pack-1.png" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -90,7 +90,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/images (28).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -104,7 +104,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/Untitled-design-1.png" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -118,7 +118,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/images (23).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -133,7 +133,7 @@
             </div>
             <!--Second part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/Thermaltake-Pure-Plus-12-RGB-Software-Enabled-Case-Fan-Three-Pack-120mm_6d655199-6732-45ac-8691-52035af67ed4_1.cb063094a24b5e1b4f9509261f60680a.jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -147,7 +147,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/images (26).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -161,7 +161,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/images (22).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -175,7 +175,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/images (21).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -190,7 +190,7 @@
             </div>
             <!--third part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/d680591a8144e88c3f620711e3d9a32d_tn.jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -200,11 +200,11 @@
                     <i class="fa-regular fa-star"></i>
                 </div>
                 <h5 class="p-name">ALSEYE Max Series 120mm Cooling Fan 3pc set</h5>
-                <h4 class="p-price"> PKR23,242 </h4>
+                <h4 class="p-price"> PKR 23,242 </h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/6146CBG6wpL._AC_UF1000,1000_QL80_.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -218,7 +218,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/46395514255e9980998dda5ced901db3.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -232,7 +232,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/All-Platform-Compatible-Tdp150W-RGB-Lighting-Effect-Gaming-Desktop-PC-Cooling.webp" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -247,7 +247,7 @@
             </div>
             <!--forth part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/cl-f100-pl12sw-a-min.webp" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -261,7 +261,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/images (20).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -275,7 +275,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/images (22).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -289,7 +289,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/images (24).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -304,7 +304,7 @@
             </div>
             <!--Fifth part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/images (25).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -318,7 +318,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/images (27).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -332,7 +332,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/Thermaltake-Pure-Plus-12-RGB-Software-Enabled-Case-Fan-Three-Pack-120mm_6d655199-6732-45ac-8691-52035af67ed4_1.cb063094a24b5e1b4f9509261f60680a.jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -346,7 +346,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingfan/xspc-rgb-series--2-pwm-800-2200rpm-5v-3pin-argb-120mm-fan-xs-fan-011-77101-1.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>

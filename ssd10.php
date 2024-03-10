@@ -6,7 +6,7 @@ $message = array(); // Initialize an empty array for messages
 // Check if the form was submitted
 if(isset($_POST['add_to_cart'])){
     // Form submission logic
-    $product_id = 147; // Set the product ID to 3
+    $product_id = 162; // Set the product ID to 3
 
     // Fetch product data based on the provided product ID
     $select_product = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$product_id'");
@@ -135,25 +135,19 @@ if(isset($message)){
     <form action="#" method="post">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid w-100 pb-1" src="accessories/graphiccard/d06dfa3c7b9087cbb9f1888a1ff6df82.jpg" id="MainImg" alt="">
+                <img class="img-fluid w-100 pb-1" src="accessories/ssd/32543f6279d557ad411d1116cf7744e9.jpg" id="MainImg" alt="">
             </div>
             <div class="col-lg-6 col-md-12 col-12">
-                <h6> Home / Acessories / Graphic Cards</h6>
-                <h3 class="py-4">Gigabyte r9 Fury WF3OC-4GD</h3>
-                <h2>PKR 235,699 </h2>
-                <input type="hidden" name="product_id" value="147"> <!-- Set the product ID -->
+                <h6> Home / Acessories / SSD</h6>
+                <h3 class="py-4">XPC GAMMING S70 BlADE 1TB PCIe Gen4x4 M.2 2280</h3>
+                <h2>PKR 32,000</h2>
+                <input type="hidden" name="product_id" value="162"> <!-- Set the product ID -->
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>Gigabyte r9 Fury WF3OC-4GD</u></b>
+                    <h4><img src="preduilticon/noun-ssd-2374273.png" alt=""> <b><u>XPC GAMMING S70 BlADE 1TB PCIe Gen4x4 M.2 2280</u></b></h4>
                 </div>
-                <span>The Gigabyte R9 Fury WF3OC-4GD is a graphics card designed for high-performance gaming and demanding graphical tasks. With its Radeon R9 Fury GPU, it delivers impressive graphics rendering capabilities, ensuring smooth gameplay and immersive visuals in the latest gaming titles. The WF3OC-4GD variant features Gigabyte's WindForce 3X cooling solution, providing efficient heat dissipation for optimal performance even under heavy loads. With 4GB of high-speed GDDR5 memory, this graphics card offers ample VRAM for high-resolution gaming and multitasking. Elevate your gaming experience with the Gigabyte R9 Fury WF3OC-4GD, providing top-tier performance and reliability for your gaming needs.
-
-
-
-
-
-</span>
+                <span>The XPC GAMING S70 BLADE 1TB PCIe Gen4x4 M.2 2280 SSD offers gamers and enthusiasts a high-performance storage solution. With its PCIe Gen4x4 interface, it delivers blazing-fast data transfer speeds, enhancing gaming experiences with rapid loading times and seamless gameplay. The spacious 1TB capacity provides ample storage for games, applications, and multimedia files. Its compact M.2 2280 form factor ensures compatibility with a wide range of gaming laptops and desktops. Elevate your gaming performance with the XPC GAMING S70 BLADE SSD, offering reliability and speed for your gaming needs.</span>
             </div>
         </div>
         </form>
@@ -297,4 +291,3 @@ if(isset($message)){
 </body>
 
 </html>
-

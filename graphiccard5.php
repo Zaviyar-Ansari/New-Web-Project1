@@ -147,7 +147,13 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>Sapphire VAPOR-X AMD Radeon R9 290 TRI-X OC</u></b>
                 </div>
-                <span></span>
+                <span>The Sapphire VAPOR-X AMD Radeon R9 290 TRI-X OC is a high-performance graphics card engineered for gaming enthusiasts seeking top-tier performance. Featuring AMD's Radeon R9 290 GPU, it delivers impressive graphics rendering capabilities, ensuring smooth gameplay and immersive visuals for a wide range of gaming titles. The TRI-X cooling system from Sapphire ensures efficient heat dissipation, allowing for sustained performance even under heavy loads. With its overclocked settings and 4GB of GDDR5 memory, this graphics card provides ample power and VRAM for high-resolution gaming and demanding applications. Upgrade your gaming setup with the Sapphire VAPOR-X Radeon R9 290 TRI-X OC for an unparalleled gaming experience at a competitive price.
+
+
+
+
+
+</span>
             </div>
         </div>
         </form>

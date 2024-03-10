@@ -147,7 +147,13 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>PULSE AMD Radeon RX 6600</u></b>
                 </div>
-                <span></span>
+                <span>The PULSE AMD Radeon RX 6600 is a graphics card designed for gaming enthusiasts seeking solid performance and value. Equipped with AMD's Radeon RX 6600 GPU, it delivers smooth and responsive gameplay at 1080p resolution, making it ideal for a wide range of gaming titles. The PULSE variant may feature an efficient cooling solution to maintain optimal temperatures during operation. With 8GB of GDDR6 memory, this graphics card offers ample VRAM for high-resolution gaming and multitasking. Elevate your gaming experience with the PULSE AMD Radeon RX 6600, providing excellent performance and value for your gaming needs.
+
+
+
+
+
+</span>
             </div>
         </div>
         </form>

@@ -147,7 +147,13 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>ASUS DUAL-RTX2080-O8G-EVO</u></b>
                 </div>
-                <span></span>
+                <span>
+The ASUS DUAL-RTX2080-O8G-EVO is a high-performance graphics card engineered for gaming enthusiasts and content creators alike. With its NVIDIA GeForce RTX 2080 GPU, it delivers exceptional graphics rendering capabilities, allowing for smooth and immersive gaming experiences at high resolutions and frame rates. The dual-fan cooling system ensures efficient heat dissipation, keeping temperatures low during intense gaming sessions. Equipped with 8GB of GDDR6 memory, this graphics card provides ample VRAM for demanding gaming titles and creative applications. Elevate your gaming and content creation with the ASUS DUAL-RTX2080-O8G-EVO, offering top-tier performance and reliability for your computing needs.
+
+
+
+
+</span>
             </div>
         </div>
         </form>

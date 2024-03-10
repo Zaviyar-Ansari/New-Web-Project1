@@ -147,7 +147,13 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>SAPLOS Radeon RX 560</u></b>
                 </div>
-                <span></span>
+                <span>The SAPPHIRE Radeon RX 560 is a budget-friendly graphics card designed for casual gaming and multimedia tasks. With its Radeon RX 560 GPU, it offers decent graphics performance for 1080p gaming and multimedia applications. While not suitable for high-end gaming, it provides a cost-effective option for users looking to upgrade their graphics capabilities without breaking the bank. The card may feature a compact design and efficient cooling solution, making it suitable for small form factor systems. Consider the SAPPHIRE Radeon RX 560 for an affordable graphics solution that meets your basic gaming and multimedia needs.
+
+
+
+
+
+</span>
             </div>
         </div>
         </form>

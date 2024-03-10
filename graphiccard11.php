@@ -147,7 +147,7 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>EVGA GeForce GTX 480</u></b>
                 </div>
-                <span></span>
+                <span>The EVGA GeForce GTX 480 is a legacy graphics card known for its performance at the time of release. While it may not match the capabilities of modern GPUs, it still offers some gaming and multimedia functionality. With its NVIDIA GeForce GTX 480 GPU, it provides basic graphics rendering for older gaming titles and multimedia applications. The card may feature a compact design and standard cooling solution. While not suitable for demanding modern games, it can serve as a budget-friendly option for users with older systems or specific compatibility needs. Consider the EVGA GeForce GTX 480 for basic graphics needs at an affordable price point.</span>
             </div>
         </div>
         </form>

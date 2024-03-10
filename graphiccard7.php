@@ -147,7 +147,7 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>ASUS ROG Strix GeForce RTX 4080</u></b>
                 </div>
-                <span></span>
+                <span>The ASUS ROG Strix GeForce RTX 4080 is a flagship graphics card meticulously engineered for unparalleled gaming performance and breathtaking visuals. Powered by NVIDIA's cutting-edge RTX 4080 GPU, it delivers extraordinary graphics rendering capabilities, ensuring smooth gameplay and immersive experiences in the latest AAA gaming titles. The ROG Strix edition showcases ASUS's advanced cooling technology, providing efficient heat dissipation to maintain optimal performance even under heavy loads. With its 12GB of GDDR6X memory and advanced ray tracing capabilities, this graphics card offers unrivaled realism and detail in gaming environments. Elevate your gaming setup with the ASUS ROG Strix GeForce RTX 4080, delivering unprecedented performance and visual fidelity for the most demanding gaming experiences.</span>
             </div>
         </div>
         </form>

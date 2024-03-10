@@ -6,7 +6,7 @@ $message = array(); // Initialize an empty array for messages
 // Check if the form was submitted
 if(isset($_POST['add_to_cart'])){
     // Form submission logic
-    $product_id = 147; // Set the product ID to 3
+    $product_id = 165; // Set the product ID to 3
 
     // Fetch product data based on the provided product ID
     $select_product = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$product_id'");
@@ -135,25 +135,19 @@ if(isset($message)){
     <form action="#" method="post">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid w-100 pb-1" src="accessories/graphiccard/d06dfa3c7b9087cbb9f1888a1ff6df82.jpg" id="MainImg" alt="">
+                <img class="img-fluid w-100 pb-1" src="accessories/ssd/2811695f16d0ba053541ea46d74a662d.jpg" id="MainImg" alt="">
             </div>
             <div class="col-lg-6 col-md-12 col-12">
-                <h6> Home / Acessories / Graphic Cards</h6>
-                <h3 class="py-4">Gigabyte r9 Fury WF3OC-4GD</h3>
-                <h2>PKR 235,699 </h2>
-                <input type="hidden" name="product_id" value="147"> <!-- Set the product ID -->
+                <h6> Home / Acessories / SSD</h6>
+                <h3 class="py-4">Samsung SSD 1TB PM9A1 NVMe PCIe 4.0</h3>
+                <h2>PKR 26,316</h2>
+                <input type="hidden" name="product_id" value="165"> <!-- Set the product ID -->
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>Gigabyte r9 Fury WF3OC-4GD</u></b>
+                    <h4><img src="preduilticon/noun-ssd-2374273.png" alt=""> <b><u>Samsung SSD 1TB PM9A1 NVMe PCIe 4.0</u></b></h4>
                 </div>
-                <span>The Gigabyte R9 Fury WF3OC-4GD is a graphics card designed for high-performance gaming and demanding graphical tasks. With its Radeon R9 Fury GPU, it delivers impressive graphics rendering capabilities, ensuring smooth gameplay and immersive visuals in the latest gaming titles. The WF3OC-4GD variant features Gigabyte's WindForce 3X cooling solution, providing efficient heat dissipation for optimal performance even under heavy loads. With 4GB of high-speed GDDR5 memory, this graphics card offers ample VRAM for high-resolution gaming and multitasking. Elevate your gaming experience with the Gigabyte R9 Fury WF3OC-4GD, providing top-tier performance and reliability for your gaming needs.
-
-
-
-
-
-</span>
+                <span>The Samsung SSD 1TB PM9A1 NVMe PCIe 4.0 offers high-speed storage performance and ample capacity for various computing needs. With its PCIe 4.0 interface, it delivers lightning-fast data transfer speeds, enhancing system responsiveness and reducing load times for applications and files. Boasting a spacious 1TB capacity, it provides generous storage space for your operating system, games, multimedia files, and more. Whether you're a gamer, content creator, or professional user, this SSD ensures reliable performance and efficient data access. Upgrade to the Samsung SSD PM9A1 for unparalleled speed and storage capacity to meet your computing demands.</span>
             </div>
         </div>
         </form>
@@ -297,4 +291,3 @@ if(isset($message)){
 </body>
 
 </html>
-

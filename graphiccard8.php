@@ -147,7 +147,13 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>ASUS Radeon RX 560 14CU</u></b>
                 </div>
-                <span></span>
+                <span>
+The ASUS Radeon RX 560 14CU is a mid-range graphics card designed to offer decent gaming performance and multimedia capabilities. Featuring AMD's Radeon RX 560 GPU, it provides reliable graphics rendering for gaming at 1080p resolution and basic multimedia tasks. The card may include ASUS's custom cooling solution to maintain optimal temperatures during operation. While not suitable for high-end gaming, it offers a budget-friendly option for casual gamers and users requiring a graphics upgrade. Consider upgrading your system with the ASUS Radeon RX 560 14CU for an affordable and capable graphics solution.
+
+
+
+
+</span>
             </div>
         </div>
         </form>

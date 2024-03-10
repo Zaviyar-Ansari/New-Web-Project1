@@ -147,7 +147,13 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>ASUS ROG Strix GeForce RTX 3070</u></b>
                 </div>
-                <span></span>
+                <span>
+The ASUS ROG Strix GeForce RTX 3070 is a high-performance graphics card engineered for gaming enthusiasts seeking exceptional performance and visual fidelity. Featuring NVIDIA's GeForce RTX 3070 GPU, it delivers smooth gameplay and immersive visuals in the latest AAA gaming titles. The ROG Strix edition boasts ASUS's advanced cooling solution, providing efficient heat dissipation for optimal performance under heavy loads. With its 8GB of GDDR6 memory and advanced ray tracing technology, this graphics card offers unparalleled realism and detail in gaming environments. Elevate your gaming setup with the ASUS ROG Strix GeForce RTX 3070, delivering unrivaled performance and visual fidelity for the most demanding gaming experiences.
+
+
+
+
+</span>
             </div>
         </div>
         </form>

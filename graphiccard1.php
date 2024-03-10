@@ -147,7 +147,7 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>EVGA GeForce RTX 3060 XC BLACK</u></b>
                 </div>
-                <span></span>
+                <span>The EVGA GeForce RTX 3060 XC BLACK is a powerful graphics card designed to deliver exceptional gaming performance and stunning visuals. With its NVIDIA Ampere architecture and 12GB of GDDR6 memory, it offers smooth gameplay and immersive experiences for the latest AAA titles. The XC BLACK edition features a sleek and minimalist design, making it an attractive addition to any gaming rig. Equipped with EVGA's precision-engineered cooling solution, it ensures optimal thermal performance, allowing for long gaming sessions without overheating. Upgrade your gaming setup with the EVGA GeForce RTX 3060 XC BLACK for unrivaled performance and graphics quality.</span>
             </div>
         </div>
         </form>

@@ -6,7 +6,7 @@ $message = array(); // Initialize an empty array for messages
 // Check if the form was submitted
 if(isset($_POST['add_to_cart'])){
     // Form submission logic
-    $product_id = 147; // Set the product ID to 3
+    $product_id = 175; // Set the product ID to 3
 
     // Fetch product data based on the provided product ID
     $select_product = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$product_id'");
@@ -135,28 +135,23 @@ if(isset($message)){
     <form action="#" method="post">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid w-100 pb-1" src="accessories/graphiccard/d06dfa3c7b9087cbb9f1888a1ff6df82.jpg" id="MainImg" alt="">
+                <img class="img-fluid w-100 pb-1" src="accessories/powersupply/5ec4ad4e363a639bddeaeff60bce1ec9.jpg" alt="">
             </div>
             <div class="col-lg-6 col-md-12 col-12">
-                <h6> Home / Acessories / Graphic Cards</h6>
-                <h3 class="py-4">Gigabyte r9 Fury WF3OC-4GD</h3>
-                <h2>PKR 235,699 </h2>
-                <input type="hidden" name="product_id" value="147"> <!-- Set the product ID -->
+                <h6> Home / Acessories / Powersupply</h6>
+                <h3 class="py-4">Corsair CS-M Series CS-550Watt 80 Plus GOLD </h3>
+                <h2>PKR 29,099</h2>
+                <input type="hidden" name="product_id" value="175"> <!-- Set the product ID -->
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>Gigabyte r9 Fury WF3OC-4GD</u></b>
+                    <h4><img src="preduilticon/noun-power-supply-6376705.png" alt=""> <b><u> Corsair CS-M Series CS-550Watt 80 Plus GOLD</u></b></h4>
                 </div>
-                <span>The Gigabyte R9 Fury WF3OC-4GD is a graphics card designed for high-performance gaming and demanding graphical tasks. With its Radeon R9 Fury GPU, it delivers impressive graphics rendering capabilities, ensuring smooth gameplay and immersive visuals in the latest gaming titles. The WF3OC-4GD variant features Gigabyte's WindForce 3X cooling solution, providing efficient heat dissipation for optimal performance even under heavy loads. With 4GB of high-speed GDDR5 memory, this graphics card offers ample VRAM for high-resolution gaming and multitasking. Elevate your gaming experience with the Gigabyte R9 Fury WF3OC-4GD, providing top-tier performance and reliability for your gaming needs.
-
-
-
-
-
-</span>
+                <span>
+The Corsair CS-M Series CS-550Watt is a premium power supply unit known for its gold-standard efficiency and reliability. With its 80 Plus GOLD certification, it ensures optimal energy utilization, reducing operating costs while delivering stable power to your PC components. Designed by Corsair, a trusted name in PC hardware, it guarantees smooth performance for both new builds and upgrades. Compact and compatible with various systems, it's an ideal choice for enthusiasts and professionals alike. Elevate your computing experience with the Corsair CS-M Series CS-550Watt for dependable power delivery and exceptional efficiency. </span>
             </div>
         </div>
-        </form>
+        </form?>
     </section>
     <!--Related products-->
     <section id="featured" class="my-5 pb-5">

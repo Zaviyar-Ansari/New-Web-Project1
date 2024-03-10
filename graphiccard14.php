@@ -147,7 +147,13 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>EVGA GeForce GTX 1080 SC</u></b>
                 </div>
-                <span></span>
+                <span>The EVGA GeForce GTX 1080 SC is a high-performance graphics card tailored for gaming enthusiasts and content creators alike. Equipped with NVIDIA's GeForce GTX 1080 GPU, it delivers exceptional graphics rendering capabilities, ensuring smooth gameplay and immersive visuals in the latest gaming titles. The SC edition features EVGA's precision-engineered cooling solution, providing efficient heat dissipation for optimal performance even under heavy loads. With its 8GB of GDDR5X memory, this graphics card offers ample VRAM for high-resolution gaming and multitasking. Elevate your gaming setup with the EVGA GeForce GTX 1080 SC, providing top-tier performance and reliability for your gaming needs.
+
+
+
+
+
+</span>
             </div>
         </div>
         </form>

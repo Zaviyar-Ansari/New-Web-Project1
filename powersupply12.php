@@ -6,7 +6,7 @@ $message = array(); // Initialize an empty array for messages
 // Check if the form was submitted
 if(isset($_POST['add_to_cart'])){
     // Form submission logic
-    $product_id = 147; // Set the product ID to 3
+    $product_id = 184; // Set the product ID to 3
 
     // Fetch product data based on the provided product ID
     $select_product = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$product_id'");
@@ -135,19 +135,19 @@ if(isset($message)){
     <form action="#" method="post">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid w-100 pb-1" src="accessories/graphiccard/d06dfa3c7b9087cbb9f1888a1ff6df82.jpg" id="MainImg" alt="">
+                <img class="img-fluid w-100 pb-1" src="accessories/powersupply/6955ff40fe8baa442fa0fec5249d2542.jpg" id="MainImg" alt="">
             </div>
             <div class="col-lg-6 col-md-12 col-12">
-                <h6> Home / Acessories / Graphic Cards</h6>
-                <h3 class="py-4">Gigabyte r9 Fury WF3OC-4GD</h3>
-                <h2>PKR 235,699 </h2>
-                <input type="hidden" name="product_id" value="147"> <!-- Set the product ID -->
+                <h6> Home / Acessories / Powersupply</h6>
+                <h3 class="py-4">750Watt PSU ATX 12v</h3>
+                <h2>PKR 17,633</h2>
+                <input type="hidden" name="product_id" value="184"> <!-- Set the product ID -->
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>Gigabyte r9 Fury WF3OC-4GD</u></b>
+                    <h4><img src="preduilticon/noun-power-supply-6376705.png" alt=""> <b><u> 750Watt PSU ATX 12v</u></b></h4>
                 </div>
-                <span>The Gigabyte R9 Fury WF3OC-4GD is a graphics card designed for high-performance gaming and demanding graphical tasks. With its Radeon R9 Fury GPU, it delivers impressive graphics rendering capabilities, ensuring smooth gameplay and immersive visuals in the latest gaming titles. The WF3OC-4GD variant features Gigabyte's WindForce 3X cooling solution, providing efficient heat dissipation for optimal performance even under heavy loads. With 4GB of high-speed GDDR5 memory, this graphics card offers ample VRAM for high-resolution gaming and multitasking. Elevate your gaming experience with the Gigabyte R9 Fury WF3OC-4GD, providing top-tier performance and reliability for your gaming needs.
+                <span> The 750Watt PSU ATX 12v is a versatile power supply unit suitable for various computing needs. With its 750-watt capacity, it provides sufficient power for most PC configurations. Engineered to meet ATX 12v standards, it ensures compatibility with a wide range of systems. Designed for reliability, it delivers stable power to your PC components. Upgrade your PC's power supply with the 750Watt PSU ATX 12v for dependable performance at an affordable price.
 
 
 
@@ -156,7 +156,7 @@ if(isset($message)){
 </span>
             </div>
         </div>
-        </form>
+        </form?>
     </section>
     <!--Related products-->
     <section id="featured" class="my-5 pb-5">

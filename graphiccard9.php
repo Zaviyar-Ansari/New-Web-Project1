@@ -147,7 +147,7 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>GeForce GTX 1660 TI OC 6G</u></b>
                 </div>
-                <span></span>
+                <span>The GeForce GTX 1660 Ti OC 6G is a powerful graphics card tailored for gaming enthusiasts seeking exceptional performance and value. Equipped with NVIDIA's GeForce GTX 1660 Ti GPU, it delivers smooth and responsive gameplay at 1080p resolution, making it ideal for a wide range of gaming titles. The OC variant features overclocked settings for enhanced performance, providing additional power for demanding gaming environments. With 6GB of GDDR6 memory, this graphics card offers ample VRAM for high-resolution gaming and multitasking. Elevate your gaming experience with the GeForce GTX 1660 Ti OC 6G, offering outstanding performance and value for your gaming needs.</span>
             </div>
         </div>
         </form>

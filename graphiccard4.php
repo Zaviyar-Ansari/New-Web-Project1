@@ -147,7 +147,8 @@ if(isset($message)){
                 <div class="icon">
                     <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>EVGA GeForce GTX 1080 TI SC Black Edition</u></b>
                 </div>
-                <span></span>
+                <span>
+The EVGA GeForce GTX 1080 Ti SC Black Edition is a high-performance graphics card tailored for gaming enthusiasts and content creators. Featuring NVIDIA's GTX 1080 Ti GPU, it delivers exceptional graphics rendering capabilities, ensuring smooth gameplay and immersive visuals for even the most demanding gaming titles. The SC Black Edition boasts EVGA's precision-engineered cooling solution, ensuring efficient heat dissipation and quiet operation during intense gaming sessions. With its 11GB of GDDR5X memory, this graphics card offers ample VRAM for high-resolution gaming and content creation tasks. Elevate your gaming experience with the EVGA GeForce GTX 1080 Ti SC Black Edition, providing top-tier performance and reliability for your computing needs.</span>
             </div>
         </div>
         </form>

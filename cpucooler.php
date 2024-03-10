@@ -76,7 +76,7 @@
         <div class="row mx-auto container">
             <!--first part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/03a293d508ebcf6e8b412a5bda212834.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -90,7 +90,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/7b0f63c7616f6360c004f3e573a74f4f.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -104,7 +104,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/629c65c1c9fde98112d87cffc195d912.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -118,7 +118,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/64dbfe2a9eb0373711622f185974bb24.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -133,7 +133,7 @@
             </div>
             <!--Second part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/7cf8c40de49522b853519e320fc16bbf.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -147,7 +147,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/8b90e310acc42322dc3f475a1abb3be3.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -161,7 +161,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/9c47195d65b628c9eb26e53dc3fc517c.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -175,7 +175,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/5634bd07dba4f5cc5ea8f1b0e97c8ab7.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -190,7 +190,7 @@
             </div>
             <!--third part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/b0809daf785ac2ef468c336c2b3c5bfb.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -204,7 +204,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/cc7ed87fe88617e4a1e1619d876c41da.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -218,7 +218,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/c51222ad7324f120bce4842dfbe09597.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -228,11 +228,11 @@
                     <i class="fa-regular fa-star"></i>
                 </div>
                 <h5 class="p-name">Hyper 212 RGB Black Edition CPU Air Cooler</h5>
-                <h4 class="p-price"> PKR25,587 </h4>
+                <h4 class="p-price"> PKR 25,587 </h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/deepcool-ak400-cooler-price-in-pakistan-4-19643-838230-190923051634788.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -247,7 +247,7 @@
             </div>
             <!--forth part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/f9fa8c4490c42723e30462f6cc922b54.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -261,7 +261,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/f68688cd326ea83a79110751a20aca72.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -275,7 +275,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/images (15).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -289,7 +289,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/images (16).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -304,7 +304,7 @@
             </div>
             <!--Fifth part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/images (17).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -318,7 +318,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/images (18).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -332,7 +332,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/images (19).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -346,7 +346,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/2904c7457dc17ca32b904a173a218db9.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>

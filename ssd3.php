@@ -6,7 +6,7 @@ $message = array(); // Initialize an empty array for messages
 // Check if the form was submitted
 if(isset($_POST['add_to_cart'])){
     // Form submission logic
-    $product_id = 147; // Set the product ID to 3
+    $product_id = 155; // Set the product ID to 3
 
     // Fetch product data based on the provided product ID
     $select_product = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$product_id'");
@@ -135,25 +135,19 @@ if(isset($message)){
     <form action="#" method="post">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid w-100 pb-1" src="accessories/graphiccard/d06dfa3c7b9087cbb9f1888a1ff6df82.jpg" id="MainImg" alt="">
+                <img class="img-fluid w-100 pb-1" src="accessories/ssd/04d539030daef35ef77cfc44ee5dc1d6.jpg" id="MainImg" alt="">
             </div>
             <div class="col-lg-6 col-md-12 col-12">
-                <h6> Home / Acessories / Graphic Cards</h6>
-                <h3 class="py-4">Gigabyte r9 Fury WF3OC-4GD</h3>
-                <h2>PKR 235,699 </h2>
-                <input type="hidden" name="product_id" value="147"> <!-- Set the product ID -->
+                <h6> Home / Acessories / SSD</h6>
+                <h3 class="py-4">Corsair Force Series MP510 1920GB M.2 SSD</h3>
+                <h2>PKR 32,382</h2>
+                <input type="hidden" name="product_id" value="155"> <!-- Set the product ID -->
                     <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
                 <h4 class="mt-5 mb-5">Product Specification</h4>
                 <div class="icon">
-                    <h4><img src="preduilticon/noun-graphic-card-2071184.png" alt=""> <b><u>Gigabyte r9 Fury WF3OC-4GD</u></b>
+                    <h4><img src="preduilticon/noun-ssd-2374273.png" alt=""> <b><u>Corsair Force Series MP510 1920GB M.2 SSD</u></b></h4>
                 </div>
-                <span>The Gigabyte R9 Fury WF3OC-4GD is a graphics card designed for high-performance gaming and demanding graphical tasks. With its Radeon R9 Fury GPU, it delivers impressive graphics rendering capabilities, ensuring smooth gameplay and immersive visuals in the latest gaming titles. The WF3OC-4GD variant features Gigabyte's WindForce 3X cooling solution, providing efficient heat dissipation for optimal performance even under heavy loads. With 4GB of high-speed GDDR5 memory, this graphics card offers ample VRAM for high-resolution gaming and multitasking. Elevate your gaming experience with the Gigabyte R9 Fury WF3OC-4GD, providing top-tier performance and reliability for your gaming needs.
-
-
-
-
-
-</span>
+                <span>The Corsair Force Series MP510 M.2 SSD offers high-performance storage with a massive 1920GB capacity. Utilizing the latest NVMe PCIe Gen3 x4 interface, it delivers rapid data transfer speeds for quick system boot-up, file transfers, and application loading. Ideal for gamers, content creators, and professionals, this SSD provides ample space for large files and demanding applications. Its robust design ensures reliability and durability, while advanced features like dynamic thermal throttling maintain optimal performance under heavy workloads. Upgrade your system with the Corsair Force Series MP510 for a seamless and responsive computing experience.</span>
             </div>
         </div>
         </form>
@@ -297,4 +291,3 @@ if(isset($message)){
 </body>
 
 </html>
-
