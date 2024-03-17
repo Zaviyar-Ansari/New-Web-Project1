@@ -1,4 +1,63 @@
-<!doctype html>
+<?php
+@include 'config.php';
+
+$message = array(); // Initialize an empty array for messages
+
+// Check if the form was submitted
+if(isset($_POST['add_to_cart'])){
+    // Form submission logic
+    $product_id = $_POST['product_id']; // Get the product ID from the form
+
+    // Fetch product data based on the provided product ID
+    $select_product = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$product_id'");
+
+    if(mysqli_num_rows($select_product) > 0){
+        $product_data = mysqli_fetch_assoc($select_product);
+
+        $product_name = $product_data['name'];
+        $product_price = $product_data['price'];
+        $product_image = $product_data['image'];
+        $product_quantity = 1;
+
+        // Check if the product is already in the cart
+        $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name'");
+
+        if(mysqli_num_rows($select_cart) > 0){
+            $message[] = 'Product already added to cart';
+        } else {
+            // Insert the product into the cart table
+            $insert_product = mysqli_query($conn, "INSERT INTO `cart` (name, price, image, quantity) VALUES ('$product_name', '$product_price', '$product_image', '$product_quantity')");
+            if($insert_product){
+                $message[] = 'Product added to cart successfully';
+
+                // If you want to store the data in another table, you can do so here
+                // For example, let's say you have a table named 'orders' to store order details
+                $insert_order = mysqli_query($conn, "INSERT INTO `orders` (product_id, product_name, product_price, product_image, quantity) VALUES ('$product_id', '$product_name', '$product_price', '$product_image', '$product_quantity')");
+                if($insert_order){
+                    $message[] = 'Order details stored successfully';
+                } else {
+                    $message[] = 'Error storing order details: ' . mysqli_error($conn); // Display MySQL error message
+                }
+            } else {
+                $message[] = 'Error adding product to cart: ' . mysqli_error($conn); // Display MySQL error message
+            }
+        }
+        
+        // Redirect to the same page to prevent form resubmission
+        header("Location: {$_SERVER['PHP_SELF']}");
+        exit();
+    } else {
+        $message[] = 'Product not found';
+    }
+}
+
+// Display messages
+if(isset($message)){
+    foreach($message as $msg){
+        echo '<div class="message">' . $msg . '</div>';
+    }
+}
+?><!doctype html>
 <html lang="en">
 
 <head>
@@ -76,7 +135,7 @@
         <div class="row mx-auto container">
             <!--first part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/03a293d508ebcf6e8b412a5bda212834.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -87,10 +146,13 @@
                 </div>
                 <h5 class="p-name">NZXT T120 Black CPU Air Cooler</h5>
                 <h4 class="p-price"> PKR 17,130</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="213"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller2.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/7b0f63c7616f6360c004f3e573a74f4f.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -101,10 +163,13 @@
                 </div>
                 <h5 class="p-name">Cryoring H7 Tower Cooling Fan</h5>
                 <h4 class="p-price"> PKR 28,507</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="214"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller3.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/629c65c1c9fde98112d87cffc195d912.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -115,10 +180,13 @@
                 </div>
                 <h5 class="p-name">ATC700 CPU Air Cooler</h5>
                 <h4 class="p-price"> PKR 24,094</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="215"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller4.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/64dbfe2a9eb0373711622f185974bb24.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -129,11 +197,14 @@
                 </div>
                 <h5 class="p-name">DEEPCOOL GAMMAXX 400 CPU Cooler 4 Heatpipes 120mm</h5>
                 <h4 class="p-price"> PKR 13,684</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="216"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--Second part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller5.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/7cf8c40de49522b853519e320fc16bbf.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -144,10 +215,13 @@
                 </div>
                 <h5 class="p-name">ID-COOLING SE-914-XT Black/White Cooler 131mm</h5>
                 <h4 class="p-price"> PKR 9,975</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="217"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller6.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/8b90e310acc42322dc3f475a1abb3be3.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -158,10 +232,13 @@
                 </div>
                 <h5 class="p-name">cryoring CPU Cooler Single Fan Side Flow AMD, H7 V2</h5>
                 <h4 class="p-price"> PKR 10,352</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="218"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller7.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/9c47195d65b628c9eb26e53dc3fc517c.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -172,10 +249,13 @@
                 </div>
                 <h5 class="p-name">Artic Freezer 34 eSport DUO|Tower CPU Cooler</h5>
                 <h4 class="p-price"> PKR 14,626</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="219"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller8.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/5634bd07dba4f5cc5ea8f1b0e97c8ab7.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -186,11 +266,14 @@
                 </div>
                 <h5 class="p-name">Cooler Master V8 GTS</h5>
                 <h4 class="p-price"> PKR 23,499</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="220"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller9.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/b0809daf785ac2ef468c336c2b3c5bfb.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -201,10 +284,13 @@
                 </div>
                 <h5 class="p-name">Corsair A500 Dual Fan CPU Cooler</h5>
                 <h4 class="p-price"> PKR 28,507</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="221"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller10.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/cc7ed87fe88617e4a1e1619d876c41da.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -215,10 +301,13 @@
                 </div>
                 <h5 class="p-name">Cooler MasterAir Maker 8</h5>
                 <h4 class="p-price"> PKR 38,199</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="222"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller11.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/c51222ad7324f120bce4842dfbe09597.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -229,10 +318,13 @@
                 </div>
                 <h5 class="p-name">Hyper 212 RGB Black Edition CPU Air Cooler</h5>
                 <h4 class="p-price"> PKR 25,587 </h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="223"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller12.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/deepcool-ak400-cooler-price-in-pakistan-4-19643-838230-190923051634788.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -243,11 +335,14 @@
                 </div>
                 <h5 class="p-name">DeepCool AK400</h5>
                 <h4 class="p-price"> PKR 9,975</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="224"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller13.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/f9fa8c4490c42723e30462f6cc922b54.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -258,10 +353,13 @@
                 </div>
                 <h5 class="p-name">Cooler Master Hyper TX3 EVO</h5>
                 <h4 class="p-price"> PKR 31,113</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="225"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller14.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/f68688cd326ea83a79110751a20aca72.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -272,10 +370,13 @@
                 </div>
                 <h5 class="p-name">Cpu Cooler 4 Cobre Heatpipe Cooling Fan </h5>
                 <h4 class="p-price"> PKR 7,697</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="226"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller15.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/images (15).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -286,10 +387,13 @@
                 </div>
                 <h5 class="p-name">Cooler Master Standard Cooler i50</h5>
                 <h4 class="p-price"> PKR 3,521</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="227"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller16.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/images (16).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -300,11 +404,14 @@
                 </div>
                 <h5 class="p-name">Corsair H55 RGB 120mm Liquid CPU Cooler</h5>
                 <h4 class="p-price"> PKR 21,600</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="228"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--Fifth part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller17.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/images (17).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -315,10 +422,13 @@
                 </div>
                 <h5 class="p-name">EKL 21923 EKL LP CPU Cooler</h5>
                 <h4 class="p-price"> PKR 3,853</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="229"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller18.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/images (18).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -329,10 +439,13 @@
                 </div>
                 <h5 class="p-name">DeepCool AK400 CPU Cooler</h5>
                 <h4 class="p-price"> PKR 7,499</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="230"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller19.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/images (19).jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -343,10 +456,13 @@
                 </div>
                 <h5 class="p-name">Alseye EL120 Cooling Kit CPU Cooler</h5>
                 <h4 class="p-price"> PKR 10,000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="231"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='cpucoller20.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/cpucooler/2904c7457dc17ca32b904a173a218db9.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -357,7 +473,10 @@
                 </div>
                 <h5 class="p-name">Cool Master V8 GTS 3Tower Heatsink</h5>
                 <h4 class="p-price"> PKR 56,430</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="232"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
         </div>
 
@@ -426,6 +545,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>  
 </body>
 
 </html>
