@@ -1,4 +1,63 @@
-<!doctype html>
+<?php
+@include 'config.php';
+
+$message = array(); // Initialize an empty array for messages
+
+// Check if the form was submitted
+if(isset($_POST['add_to_cart'])){
+    // Form submission logic
+    $product_id = $_POST['product_id']; // Get the product ID from the form
+
+    // Fetch product data based on the provided product ID
+    $select_product = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$product_id'");
+
+    if(mysqli_num_rows($select_product) > 0){
+        $product_data = mysqli_fetch_assoc($select_product);
+
+        $product_name = $product_data['name'];
+        $product_price = $product_data['price'];
+        $product_image = $product_data['image'];
+        $product_quantity = 1;
+
+        // Check if the product is already in the cart
+        $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name'");
+
+        if(mysqli_num_rows($select_cart) > 0){
+            $message[] = 'Product already added to cart';
+        } else {
+            // Insert the product into the cart table
+            $insert_product = mysqli_query($conn, "INSERT INTO `cart` (name, price, image, quantity) VALUES ('$product_name', '$product_price', '$product_image', '$product_quantity')");
+            if($insert_product){
+                $message[] = 'Product added to cart successfully';
+
+                // If you want to store the data in another table, you can do so here
+                // For example, let's say you have a table named 'orders' to store order details
+                $insert_order = mysqli_query($conn, "INSERT INTO `orders` (product_id, product_name, product_price, product_image, quantity) VALUES ('$product_id', '$product_name', '$product_price', '$product_image', '$product_quantity')");
+                if($insert_order){
+                    $message[] = 'Order details stored successfully';
+                } else {
+                    $message[] = 'Error storing order details: ' . mysqli_error($conn); // Display MySQL error message
+                }
+            } else {
+                $message[] = 'Error adding product to cart: ' . mysqli_error($conn); // Display MySQL error message
+            }
+        }
+        
+        // Redirect to the same page to prevent form resubmission
+        header("Location: {$_SERVER['PHP_SELF']}");
+        exit();
+    } else {
+        $message[] = 'Product not found';
+    }
+}
+
+// Display messages
+if(isset($message)){
+    foreach($message as $msg){
+        echo '<div class="message">' . $msg . '</div>';
+    }
+}
+?><!doctype html>
 <html lang="en">
 
 <head>
@@ -76,7 +135,7 @@
         <div class="row mx-auto container">
             <!--first part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='coolingsys1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/download.jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -87,10 +146,13 @@
                 </div>
                 <h5 class="p-name ">DIY Liquid Cooler120/240/360</h5>
                 <h4 class="p-price "> PKR 13,168</h4>
-                <button class="buy-btn ">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="254"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='coolingsys2.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/61nm2nZsccL._AC_UF894,1000_QL80_.jpg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -101,10 +163,13 @@
                 </div>
                 <h5 class="p-name ">DIY Liquid Cooling System Pack </h5>
                 <h4 class="p-price "> PKR 19,530</h4>
-                <button class="buy-btn ">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="255"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='coolingsys3.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (29).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -115,10 +180,13 @@
                 </div>
                 <h5 class="p-name ">Master Liquid Maker 240</h5>
                 <h4 class="p-price "> PKR 43,559</h4>
-                <button class="buy-btn ">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="256"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='coolingsys4.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (30).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -129,11 +197,14 @@
                 </div>
                 <h5 class="p-name ">Aragon 900 Liquid Cooling System</h5>
                 <h4 class="p-price "> PKR 23,445</h4>
-                <button class="buy-btn ">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="257"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--Second part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='coolingsys5.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (31).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -144,10 +215,13 @@
                 </div>
                 <h5 class="p-name ">DIY Liquid Cooling</h5>
                 <h4 class="p-price "> PKR 30,474</h4>
-                <button class="buy-btn ">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="258"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='coolingsys6.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (32).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -158,10 +232,13 @@
                 </div>
                 <h5 class="p-name ">Vbesrlife RG 374 Water Cooling </h5>
                 <h4 class="p-price "> PKR 62,437</h4>
-                <button class="buy-btn ">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="259"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='coolingsys7.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (33).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -172,10 +249,13 @@
                 </div>
                 <h5 class="p-name ">DIY PC Water Cooling Kit</h5>
                 <h4 class="p-price "> PKR 35,922</h4>
-                <button class="buy-btn ">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="260"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='coolingsys8.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (34).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -186,11 +266,14 @@
                 </div>
                 <h5 class="p-name ">DIY PC Water Cooling Kit</h5>
                 <h4 class="p-price "> PKR 35,455</h4>
-                <button class="buy-btn ">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="261"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='coolingsys9.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (35).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -201,10 +284,13 @@
                 </div>
                 <h5 class="p-name ">DIY PC Water Cooling Kit</h5>
                 <h4 class="p-price "> PKR 34,566</h4>
-                <button class="buy-btn ">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="262"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='coolingsys10.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (36).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -215,10 +301,13 @@
                 </div>
                 <h5 class="p-name ">DIY PC Water Cooling Kit</h5>
                 <h4 class="p-price "> PKR 38,544</h4>
-                <button class="buy-btn ">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="263"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='coolingsys11.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (37).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -229,10 +318,13 @@
                 </div>
                 <h5 class="p-name ">DIY Liquid Syscooling System</h5>
                 <h4 class="p-price "> PKR 122,999</h4>
-                <button class="buy-btn ">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="264"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='coolingsys12.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (38).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -243,11 +335,14 @@
                 </div>
                 <h5 class="p-name ">EK-KIT Classis RGB S360 </h5>
                 <h4 class="p-price "> PKR 92,658</h4>
-                <button class="buy-btn ">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="265"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth part-->
             <!--first-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='coolingsys13.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (39).jpeg " alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -258,10 +353,13 @@
                 </div>
                 <h5 class="p-name ">DIY Water Cooling System Pack</h5>
                 <h4 class="p-price "> PKR 28,999 </h4>
-                <button class="buy-btn ">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="266"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='coolingsys14.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (40).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -272,10 +370,13 @@
                 </div>
                 <h5 class="p-name ">Fursuit Liquid Cooling System</h5>
                 <h4 class="p-price "> PKR 54,675</h4>
-                <button class="buy-btn ">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="267"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
-            <div onclick="window.location.href='s2product1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='coolingsys15.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="accessories/collingsystem/images (41).jpeg" alt=" ">
                 <div class="star ">
                     <i class="fa-solid fa-star "></i>
@@ -286,7 +387,10 @@
                 </div>
                 <h5 class="p-name ">Diy Water Cooling System Pack</h5>
                 <h4 class="p-price "> PKR 43,990</h4>
-                <button class="buy-btn ">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="268"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
 
         </div>
@@ -356,6 +460,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js " integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js " integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+ " crossorigin="anonymous "></script>
+    <script src="js/script.js"></script>  
 </body>
 
 </html>

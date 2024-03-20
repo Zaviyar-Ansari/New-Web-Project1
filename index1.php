@@ -95,7 +95,7 @@
                 <img class="image-fluid" src="prodcatgimg/catgimg3.jpeg" alt="">
                 <div class="details">
                     <h2>Acessories</h2>
-                    <a href="acessories.html"><button class="text-uppercase">Shop Now</button></a>
+                    <a href="acessories.php"><button class="text-uppercase">Shop Now</button></a>
                 </div>
             </div>
         </div>
@@ -308,7 +308,7 @@
         </div>
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">100% GENUINE PRODUCTS</h5>
+                <h5 class="card-title">100% GENUINE</h5>
                 <p class="card-text">At Craft PC quality comes first. We only work with trusted brands, and deal in genuine products</p>
 
             </div>
