@@ -103,19 +103,19 @@ if(isset($message)){
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="index1.html">Home</a>
+                        <a class="nav-link" href="index1.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="shop.html">Shop</a>
+                        <a class="nav-link active" href="shop.php">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blogpage.html">Blog</a>
+                        <a class="nav-link" href="blogpage.php">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="AboutUspage.html">About</a>
+                        <a class="nav-link" href="AboutUspage.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contactuspage.html">Contact Us</a>
+                        <a class="nav-link" href="contactuspage.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <i class="fa-solid fa-bag-shopping"></i> >
@@ -276,13 +276,13 @@ if(isset($message)){
             <nav aria-label="...">
                 <ul class="pagination mt-5">
                     <li class="page-item">
-                        <a class="page-link" href="shop2.html">Previous</a>
+                        <a class="page-link" href="shop2.php">Previous</a>
                     </li>
-                    <li class="page-item "><a class="page-link" href="shop.html">1</a></li>
+                    <li class="page-item "><a class="page-link" href="shop.php">1</a></li>
                     <li class="page-item  " aria-current="page">
-                        <a class="page-link" href="shop2.html">2</a>
+                        <a class="page-link" href="shop2.php">2</a>
                     </li>
-                    <li class="page-item active"><a class="page-link" href="shop3.html">3</a></li>
+                    <li class="page-item active"><a class="page-link" href="shop3.php">3</a></li>
                     <li class="page-item disabled">
                         <a class="page-link" href="#">Next</a>
                     </li>

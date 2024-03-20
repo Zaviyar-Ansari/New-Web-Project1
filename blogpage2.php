@@ -24,19 +24,19 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="index1.html">Home</a>
+                        <a class="nav-link active" href="index1.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop.html">Shop</a>
+                        <a class="nav-link" href="shop.php">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blogpage.html">Blog</a>
+                        <a class="nav-link" href="blogpage.php">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="AboutUspage.html">About</a>
+                        <a class="nav-link" href="AboutUspage.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contactuspage.html">Contact Us</a>
+                        <a class="nav-link" href="contactuspage.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <i class="fa-solid fa-bag-shopping"></i> >
@@ -46,32 +46,38 @@
             </div>
         </div>
     </nav>
+
     <!--upper section of blog page-->
     <section id="blog-home" class="pt-5 mt-5 container">
         <h1 class="font-weight-bold pt-5">Blogs</h1>
         <hr>
     </section>
-    <!--blog first page-->
+    <!--blog second page-->
     <div class="wrapper1">
-        <img src="blogpageimg/images (1).jpeg" alt="">
+        <img src="blogpageimg/download (2).jpeg" alt="">
         <div class="text-box">
-            <h2>Building Your Dream Machine: The Ultimate Guide to Custom PC Creation.</h2>
-            <p><span>Introduction: </span>Are you ready to take your computing experience to the next level? Building your dream machine is an exciting journey that allows you to create a custom PC tailored to your exact needs and preferences. In this comprehensive
-                guide, we will walk you through the steps to bring your dream PC to life, from selecting the right components to assembling your masterpiece. Let's dive into the world of custom PC creation!<br><br> <span> Define
-                Your Goals</span> <br> Before you start building your custom PC, it's crucial to define your goals. What will you primarily use your PC for? Are you a gamer, a content creator, or a professional in need of high-performance computing power?
-                Understanding your needs will help you choose the right components.<br><br> <span> Select the Right Components</span><br> Choosing the right components is the heart of custom PC building. Here are some essential parts to consider:<br><br><span>1.
-                Processor (CPU):</span><br>Your CPU is the brain of your PC. Select one that matches your performance requirements, whether it's for gaming, content creation, or multitasking.
-                <br> <br><span>2. Graphics Card (GPU):</span> Gamers and content creators will want a powerful GPU. Make sure it's compatible with your monitor's resolution.
-                <br> <br><span>3. Memory (RAM):</span> A sufficient amount of RAM is essential for multitasking and running resource-intensive applications.
-                <br> <br> <span>4. Storage:</span> Decide between SSDs for speed or HDDs for capacity, or combine both for the best of both worlds.
-                <br> <br><span>5. Motherboard:</span> Ensure it's compatible with your CPU and has the necessary features for your needs.
-                <br> <br><span>6. Power Supply Unit (PSU):</span> Choose a PSU with sufficient wattage to power your components.
-                <br> <br><span>7. Case:</span> Select a case that fits your components and provides proper airflow for cooling.
-                <br> <br> <span> 8. Cooling System: </span>Depending on your CPU and GPU, you may need additional cooling solutions.
-                <br> <br> <span> 9. Peripherals:</span> Don't forget to include a keyboard, mouse, and monitor in your setup.
-                <br> <br><span> Conclusion:</span> <br>Building your dream machine is a fulfilling endeavor that results in a custom PC perfectly tailored to your needs. Whether you're a gamer, content creator, or a professional, following this ultimate
-                guide will help you create the PC of your dreams. Make sure to plan, choose your components wisely, and enjoy the incredible performance and customization that a custom-built PC can offer. Get ready to embark on an exciting journey into
-                the world of custom PC creation!</p>
+            <h2>Component Chronicles: Exploring the Heart of Custom PCs.</h2>
+            <p><span>Introduction:</span> When it comes to custom PCs, the components you choose are the building blocks that define your system's performance and capabilities. In this blog, we embark on a journey through the "Component Chronicles," where
+                we'll explore the essential elements that form the heart of custom PCs. From powerful processors to high-performance graphics cards, we'll delve into the world of computer components to help you make informed choices for your dream PC.
+                Let's get started!<br><br>
+                <br><br> <span>1: The Processor (CPU):</span> The Brain of Your PC At the core of every computer lies the central processing unit (CPU), often referred to as the brain of the system. Explore the various CPU options available, from high-performance
+                models designed for gaming and content creation to budget-friendly choices for everyday computing. Learn about clock speed, cores, and threads, and discover how to select the right CPU for your specific needs.
+                <br><br> <span>2: Graphics Card (GPU):</span> Unleashing Visual Power For gamers and content creators, the graphics card (GPU) is a critical component. Dive into the world of GPUs, from entry-level options to high-end gaming monsters.
+                Understand the role of VRAM, CUDA cores, and ray tracing capabilities, and discover how to choose the perfect GPU to bring your visuals to life.
+                <br><br> <span>3: Memory (RAM):</span> Multitasking Mastery RAM (Random Access Memory) is the memory your PC uses to run applications and manage tasks simultaneously. Learn how to select the ideal RAM size and speed for your custom PC,
+                ensuring seamless multitasking and lightning-fast data access.
+                <br><br> <span>4: Storage Solutions:</span> Speed vs. Capacity Storage is where your files, games, and applications reside. Compare the benefits of Solid-State Drives (SSDs) and Hard Disk Drives (HDDs) to find the perfect balance between
+                speed and capacity. We'll also explore M.2 drives and NVMe SSDs for ultra-fast data access.
+                <br><br> <span>5: Motherboards: </span>The Nervous System of Your PC The motherboard is the central hub where all components connect. Explore different motherboard sizes, form factors, and chipsets to understand how they impact your PC's
+                capabilities. Find out which motherboard suits your specific CPU and future upgrade plans.
+                <br><br> <span>6: Power Supply Unit (PSU):</span> Ensuring a Steady Flow of Power Your PC's power supply unit (PSU) is crucial for maintaining stability and preventing damage. Discover how to choose the right wattage, efficiency rating,
+                and connectors for your custom PC to ensure a reliable power source. Cooling Solutions: Keeping Temperatures in Check Efficient cooling is essential to prevent overheating and maintain your PC's performance. Explore air cooling, liquid
+                cooling, and other cooling solutions to keep your components at optimal temperatures, whether you're gaming or engaging in resource-intensive tasks.
+                <br><br><span>7: Peripherals:</span> Completing Your Setup Your custom PC is incomplete without the right peripherals. We'll discuss essential accessories like gaming keyboards, mice, monitors, and headsets, helping you create a well-rounded
+                and immersive computing experience.
+                <br><br><span>Conclusion:</span><br> The "Component Chronicles" have taken us through the heart of custom PCs, revealing the key components that shape your system's performance and capabilities. Armed with this knowledge, you're now better
+                equipped to make informed decisions when building your dream PC. Whether you're a gamer, content creator, or a casual user, choosing the right components is the first step toward creating a powerful and customized computing experience.
+                Stay tuned for more in-depth insights and recommendations in our future blogs as we continue to explore the exciting world of custom PCs.</p>
         </div>
     </div>
 

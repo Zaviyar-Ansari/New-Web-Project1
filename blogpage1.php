@@ -24,19 +24,19 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="index1.html">Home</a>
+                        <a class="nav-link active" href="index1.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop.html">Shop</a>
+                        <a class="nav-link" href="shop.php">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blogpage.html">Blog</a>
+                        <a class="nav-link" href="blogpage.php">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="AboutUspage.html">About</a>
+                        <a class="nav-link" href="AboutUspage.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contactuspage.html">Contact Us</a>
+                        <a class="nav-link" href="contactuspage.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <i class="fa-solid fa-bag-shopping"></i> >
@@ -51,42 +51,29 @@
         <h1 class="font-weight-bold pt-5">Blogs</h1>
         <hr>
     </section>
-    <!--blog fifth page-->
+    <!--blog first page-->
     <div class="wrapper1">
-        <img src="blogpageimg/download (3).jpeg" alt="">
+        <img src="blogpageimg/images (1).jpeg" alt="">
         <div class="text-box">
-            <h2>Prebuilt VS Custom PC: Which is Right for you?</h2>
-            <p><span>Introduction: </span>When it comes to acquiring a new computer, the eternal debate between prebuilt and custom PCs rages on. Each option has its unique advantages and drawbacks, and the choice ultimately depends on your specific needs
-                and preferences. In this blog, we'll compare prebuilt and custom PCs to help you determine which is the right choice for you. Let's dive into the world of computing and make an informed decision!
-                <br><br><span>1. Prebuilt PCs:</span> Ready-to-Use Convenience Prebuilt PCs, as the name suggests, come fully assembled and ready for immediate use. Here are some reasons to consider them:
-                <br><br><span>a. Time-Saving:</span> If you need a computer without the hassle of component selection and assembly, prebuilt PCs save you time.
-                <br> <span>b. Quality Assurance:</span> Leading manufacturers rigorously test prebuilt systems, ensuring reliability and quality.
-                <br><span>c. Warranty and Support:</span> Most prebuilt PCs come with warranties and customer support, offering peace of mind.
-                <br><br> <span>2. Custom PCs:</span> Tailored to Your Specifications Custom PCs offer the ultimate in personalization and performance optimization. Consider these aspects:
-                <br><br><span>a. Total Control:</span> Selecting individual components allows you to build a PC that perfectly matches your needs and preferences.
-                <br><span>b. Performance Potential:</span> Custom PCs often outperform prebuilt systems, making them ideal for gamers and professionals.
-                <br> <span>c. Upgradability:</span> Custom PCs are easier to upgrade, ensuring your system can adapt to changing needs.
-                <br><br> <span>3. Budget Considerations: </span>The Cost Factor Budget is a significant factor when deciding between prebuilt and custom PCs:
-                <br><br> <span>a. Prebuilt PCs:</span> While prebuilt systems are available at various price points, customizing one to your exact specifications might be costlier.
-                <br> <span>b. Custom PCs: </span>Custom builds can be more cost-effective if you carefully select components and are willing to put in the effort.
-                <br><br><span>4. Gaming Performance:</span> A Gamer's Dilemma For gamers, the choice between prebuilt and custom PCs can be critical:
-                <br><br> <span>a. Prebuilt PCs:</span> Gaming-focused prebuilts often come with dedicated graphics cards and optimized configurations, making them a plug-and-play gaming solution.
-                <br> <span>b. Custom PCs:</span> Building a gaming PC allows for better component selection, potentially resulting in a more powerful gaming rig.
-                <br><br> <span>5. Content Creation and Professional Workstations:</span> Custom PCs shine when it comes to content creation and professional workstations:
-                <br><br> <span>a. Custom PCs:</span> These can be fine-tuned for resource-intensive tasks, such as video editing, 3D modeling, and rendering.
-                <br> <span>b. Prebuilt PCs:</span> While some prebuilt workstations exist, custom builds offer more flexibility and performance potential for professionals.
-                <br><br> <span> 6. Maintenance and Support:</span> Consider the long-term care and support you'll need for your PC:
-                <br><br> <span> a. Prebuilt PCs:</span> Typically come with warranties and readily available customer support.
-                <br> <span>b. Custom PCs:</span> You may need to rely on individual component warranties and perform more hands-on maintenance.
-                <br><br> <span>Conclusion:</span><br> The choice between prebuilt and custom PCs ultimately boils down to your specific requirements, budget, and personal preferences. Prebuilt PCs offer convenient, ready-to-use solutions with quality
-                assurance and support, making them ideal for those seeking plug-and-play simplicity. Custom PCs, on the other hand, provide total control, unparalleled performance potential, and flexibility for upgrades. Before making your decision, carefully
-                evaluate your computing needs and budget. Whether you choose prebuilt or custom, the goal is to ensure that your PC suits your unique requirements, making it the perfect tool for your computing journey.
-
-
-            </p>
+            <h2>Building Your Dream Machine: The Ultimate Guide to Custom PC Creation.</h2>
+            <p><span>Introduction: </span>Are you ready to take your computing experience to the next level? Building your dream machine is an exciting journey that allows you to create a custom PC tailored to your exact needs and preferences. In this comprehensive
+                guide, we will walk you through the steps to bring your dream PC to life, from selecting the right components to assembling your masterpiece. Let's dive into the world of custom PC creation!<br><br> <span> Define
+                Your Goals</span> <br> Before you start building your custom PC, it's crucial to define your goals. What will you primarily use your PC for? Are you a gamer, a content creator, or a professional in need of high-performance computing power?
+                Understanding your needs will help you choose the right components.<br><br> <span> Select the Right Components</span><br> Choosing the right components is the heart of custom PC building. Here are some essential parts to consider:<br><br><span>1.
+                Processor (CPU):</span><br>Your CPU is the brain of your PC. Select one that matches your performance requirements, whether it's for gaming, content creation, or multitasking.
+                <br> <br><span>2. Graphics Card (GPU):</span> Gamers and content creators will want a powerful GPU. Make sure it's compatible with your monitor's resolution.
+                <br> <br><span>3. Memory (RAM):</span> A sufficient amount of RAM is essential for multitasking and running resource-intensive applications.
+                <br> <br> <span>4. Storage:</span> Decide between SSDs for speed or HDDs for capacity, or combine both for the best of both worlds.
+                <br> <br><span>5. Motherboard:</span> Ensure it's compatible with your CPU and has the necessary features for your needs.
+                <br> <br><span>6. Power Supply Unit (PSU):</span> Choose a PSU with sufficient wattage to power your components.
+                <br> <br><span>7. Case:</span> Select a case that fits your components and provides proper airflow for cooling.
+                <br> <br> <span> 8. Cooling System: </span>Depending on your CPU and GPU, you may need additional cooling solutions.
+                <br> <br> <span> 9. Peripherals:</span> Don't forget to include a keyboard, mouse, and monitor in your setup.
+                <br> <br><span> Conclusion:</span> <br>Building your dream machine is a fulfilling endeavor that results in a custom PC perfectly tailored to your needs. Whether you're a gamer, content creator, or a professional, following this ultimate
+                guide will help you create the PC of your dreams. Make sure to plan, choose your components wisely, and enjoy the incredible performance and customization that a custom-built PC can offer. Get ready to embark on an exciting journey into
+                the world of custom PC creation!</p>
         </div>
     </div>
-
 
     <!--footer-->
     <footer class="mt-5 py-5">

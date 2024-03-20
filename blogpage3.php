@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="style1.css">
 </head>
@@ -26,19 +24,19 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="index1.html">Home</a>
+                        <a class="nav-link active" href="index1.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop.html">Shop</a>
+                        <a class="nav-link" href="shop.php">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blogpage.html">Blog</a>
+                        <a class="nav-link" href="blogpage.php">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="AboutUspage.html">About</a>
+                        <a class="nav-link" href="AboutUspage.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contactuspage.html">Contact Us</a>
+                        <a class="nav-link" href="contactuspage.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <i class="fa-solid fa-bag-shopping"></i> >
@@ -48,79 +46,39 @@
             </div>
         </div>
     </nav>
-    <section id="blog-home" class="pt-5 mt-5 py-0 container">
-
+    <!--upper section of blog page-->
+    <section id="blog-home" class="pt-5 mt-5 container">
+        <h1 class="font-weight-bold pt-5">Blogs</h1>
+        <hr>
     </section>
-    <!--contact us page-->
-    <section id="info">
-        <div class="container2">
-            <div class="contactinfo">
-                <div>
-                    <h2> Contact Info</h2>
-                    <ul class="info1">
-                        <li>
-                            <span><img src="contactimg/location.png" alt=""></span>
-                            <span>123 STREET NAME, CITY, US<br>
-                            Washington DC ,US<br>
-                            90017
-                        </span>
-                        </li>
-                        <!--2nd list-->
-                        <li>
-                            <span><img src="contactimg/mail.png" alt=""></span>
-                            <span>zawiyaransari5@gmail.com
-                        </span>
-                        </li>
-                        <li>
-                            <span><img src="contactimg/call.png" alt=""></span>
-                            <span>(+92)-320-8433088
-                        </span>
-                        </li>
-                    </ul>
-                </div>
-                <ul class="sci">
-                    <li>
-                        <a href=""><img src="contactimg/1.png" alt=""></a>
-                    </li>
-                    <li>
-                        <a href=""><img src="contactimg/2.png" alt=""></a>
-                    </li>
-                    <li>
-                        <a href=""><img src="contactimg/3.png" alt=""></a>
-                    </li>
-                    <li>
-                        <a href=""><img src="contactimg/4.png" alt=""></a>
-                    </li>
-                    <li>
-                        <a href=""><img src="contactimg/5.png" alt=""></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="contactform">
-                <h2>Send a Message</h2>
-                <div class="formBox">
-                    <form action="https://formsubmit.co/zawiyaransari5@gmail.com" method="POST">
-                        <div class="inputBox w50">
-                            <input type="text" name="name" required>
-                            <span>Enter Name</span>
-                        </div>
-                        <div class="inputBox w50">
-                            <input type="email" name="email" required>
-                            <span>Email Address</span>
-                        </div>
-                        <div class="inputBox w100">
-                            <textarea required name="message"></textarea>
-                            <span>Write your Message here...</span>
-                        </div>
-                        <div class="inputBox w100">
-                            <input type="submit" value="Send">
-                        </div>
-                    </form>
-                </div>
-
-            </div>
+    <!--blog third page-->
+    <div class="wrapper1">
+        <img src="blogpageimg/download.jpeg" alt="">
+        <div class="text-box">
+            <h2>Crafting Custom PC Experiences: From Vision to Reality</h2>
+            <p><span>Introduction:</span> In a world where technology is constantly evolving, the desire for a personalized and powerful computing experience has never been stronger. Custom PCs are the answer, offering the flexibility to create a machine
+                that matches your unique needs and desires. In this blog, we'll explore the journey of crafting custom PC experiences – from envisioning your dream system to turning it into a reality. Join us as we delve into the art of building the perfect
+                custom PC.
+                <br><br><span>1. Define Your Vision:</span> Your Dream, Your PC Every custom PC begins with a vision. Are you an avid gamer looking for maximum performance, a content creator seeking exceptional rendering power, or a professional in need
+                of a specialized workstation? Defining your vision is the first step to crafting a custom PC that caters to your specific requirements.
+                <br><br> <span> 2. Component Selection:</span> Building Blocks of Excellence Customization starts with selecting the right components. Dive into the world of processors, graphics cards, RAM, storage, motherboards, and more. We'll guide
+                you through the process of choosing components that align with your vision, whether you're focused on raw power, efficient multitasking, or speedy data access.
+                <br><br> <span>3. The Art of Balance:</span> Crafting Your Perfect Configuration Balancing components is a key aspect of custom PC creation. We'll discuss how to optimize your configuration, ensuring that every part harmonizes with the
+                others to create a well-rounded system. Discover how to achieve that perfect equilibrium between performance, aesthetics, and cost.
+                <br><br> <span>4. Assembly and Wiring:</span> Bringing Your Vision to Life With components in hand, it's time to bring your vision to life. We'll walk you through the assembly process, from securing the motherboard to connecting power
+                cables, and installing cooling solutions. Whether you're an experienced builder or a first-timer, you'll find tips and tricks to ensure a smooth build.
+                <br><br> <span>5. Aesthetics and Customization:</span> Beyond Performance A custom PC is not just about raw performance; it's an expression of your style. Learn how to personalize your PC with RGB lighting, custom cases, cable management,
+                and more. Make your PC a reflection of your personality while ensuring optimal functionality.
+                <br><br> <span>6. Testing and Optimization:</span> Fine-Tuning for Perfection Building your custom PC is only part of the journey. We'll discuss the importance of testing your system for stability and performance. Fine-tuning your PC through
+                software tweaks and updates is equally crucial to achieving your desired experience.
+                <br><br> <span>7. Maintenance and Upgrades:</span> Future-Proofing Your Investment As technology advances, your custom PC will benefit from periodic maintenance and upgrades. We'll provide insights on how to keep your PC running smoothly
+                and extend its lifespan with component replacements and performance enhancements.
+                <br><br> <span>Conclusion:</span><br> Crafting custom PC experiences is a journey that allows you to turn your vision into a reality. Whether you're seeking a gaming powerhouse, a content creation workhorse, or a versatile everyday system,
+                customization empowers you to build a PC that's uniquely yours. With careful component selection, thoughtful assembly, and an eye for aesthetics, you can create a computing experience that not only meets but exceeds your expectations.
+                Stay tuned for more insights, tips, and recommendations on custom PC building as we continue to explore the limitless possibilities of crafting your dream PC.</p>
         </div>
-    </section>
+    </div>
+
     <!--footer-->
     <footer class="mt-5 py-5">
         <div class="row container mx-auto pt-5">

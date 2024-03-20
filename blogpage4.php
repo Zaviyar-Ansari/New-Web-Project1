@@ -24,19 +24,19 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="index1.html">Home</a>
+                        <a class="nav-link active" href="index1.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop.html">Shop</a>
+                        <a class="nav-link" href="shop.php">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blogpage.html">Blog</a>
+                        <a class="nav-link" href="blogpage.php">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="AboutUspage.html">About</a>
+                        <a class="nav-link" href="AboutUspage.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contactuspage.html">Contact Us</a>
+                        <a class="nav-link" href="contactuspage.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <i class="fa-solid fa-bag-shopping"></i> >
@@ -51,37 +51,38 @@
         <h1 class="font-weight-bold pt-5">Blogs</h1>
         <hr>
     </section>
-    <!--blog seventh page-->
+    <!--blog forth page-->
     <div class="wrapper1">
-        <img src="blogpageimg/pc-build-ideas-7.jpg" alt="">
+        <img src="blogpageimg/download (1).jpeg" alt="">
         <div class="text-box">
-            <h2>Custom PC Build Showcase: Inspirig Builds from Our Customers.</h2>
-            <p>
-                <span>Introduction:</span> At Craft PC, we're not just about selling components and prebuilt PCs; we're part of a vibrant community of tech enthusiasts, gamers, and creative professionals. We've been fortunate to witness some incredible
-                custom PC builds by our customers, and in this blog, we're excited to showcase these inspiring creations. Get ready to be awed by the talent and creativity of our community members and find inspiration for your next custom PC build.
+            <h2>The Prebuilt PC Paradigm: Unveiling Ready-to-Use Powerhouses</h2>
+            <p><span>Introduction: </span>In the ever-evolving world of computing, the demand for high-performance machines has given rise to a new paradigm: prebuilt PCs. These ready-to-use powerhouses offer convenience and impressive specs, making them
+                an enticing option for users who seek top-notch performance without the hassle of DIY assembly. In this blog, we'll dive into the world of prebuilt PCs, unveiling their advantages, highlighting popular models, and helping you make informed
+                choices when considering one for your computing needs.
+                <br> <br> <span>1. The Appeal of Prebuilt PCs:</span> Plug and Play Convenience Prebuilt PCs, as the name suggests, arrive fully assembled and ready to use. Discover the convenience they offer, sparing users from the complexities of selecting
+                components and building a system from scratch. Unbox, plug in, and start enjoying the power and performance you desire.
+                <br> <br><span>2. Advantages of Prebuilt PCs:</span> Time, Assurance, and Support We'll explore the myriad advantages of opting for a prebuilt PC, including time savings, quality assurance, and customer support. Learn how these aspects
+                can simplify your computing experience and provide peace of mind.
+                <br> <br> <span>3.
+                    Top Prebuilt PC Models:</span> Unveiling the Powerhouses Delve into the world of top prebuilt PC models, including popular options from renowned manufacturers. We'll review the specs, performance, and features of these powerhouses
+                to help you choose the right one for your specific needs.
+                <br> <br> <span>  4. Gaming Prebuilt PCs:</span> Conquering the Virtual Worlds For gamers, prebuilt PCs offer a hassle-free way to experience gaming at its best. We'll take a close look at gaming-oriented prebuilt systems, including their
+                gaming capabilities, graphics cards, and immersive features.
+                <br> <br> <span> 5. Content Creation and Workstation Prebuilt PCs:</span> Fueling Creativity Explore prebuilt PCs designed for content creators and professionals. These workstations provide the computational muscle needed for tasks like
+                video editing, 3D modeling, and more. Discover the components and features that make them ideal for creative work.
+                <br> <br> <span> 6. Customization and Upgradability:</span> Tailoring Your Prebuilt PC Prebuilt PCs are not limited to off-the-shelf configurations. Learn how to customize and upgrade your prebuilt system to adapt to your evolving needs,
+                ensuring a long-lasting investment.
+                <br> <br> <span> 7. Prebuilt PCs vs. Custom-Built PCs:</span> Making the Right Choice We'll compare prebuilt PCs to custom-built counterparts, highlighting the pros and cons of each. By the end of this section, you'll have a clear understanding
+                of which option aligns better with your preferences and requirements.
+                <br> <br> <span> 8. Maintenance
+                    and Optimization:</span> Keeping Your Prebuilt PC at Its Best While prebuilt PCs are ready-to-use, they still require maintenance and optimization to ensure longevity and peak performance. We'll provide valuable tips on how to keep
+                your prebuilt powerhouse running smoothly.
+                <br> <br> <span>Conclusion:</span> <br>The prebuilt PC paradigm offers an exciting and convenient way to access powerful computing solutions. With various models tailored to different needs, these ready-to-use powerhouses can cater to
+                gamers, content creators, professionals, and general users alike. Whether you're seeking top-notch gaming performance or a workstation for intensive tasks, prebuilt PCs offer a compelling alternative to custom-built systems. Explore your
+                options, make an informed choice, and unlock the potential of a prebuilt PC that perfectly suits your computing needs.
 
-                <br> <br> <span>1. The Battlestation Titan: An Epic Gaming Rig</span> One of our customers, [Customer Name], shared their epic gaming rig build with us. Featuring a high-end CPU, multiple GPUs in SLI, and a custom liquid cooling loop,
-                this PC is a true beast. The RGB lighting and custom cable management make it a visual masterpiece. [Customer Name] showcases how you can push the boundaries of gaming performance and aesthetics.
+            </p>
 
-                <br> <br> <span>2. The Workstation Wonder: A Content Creator's Dream</span> For content creators, [Customer Name]'s build is a dream come true. Equipped with a powerful CPU, a high-capacity RAM, and multiple storage options, this PC handles
-                video editing and rendering like a pro. The meticulously designed workstation setup with dual monitors shows that creativity and productivity go hand in hand.
-                <br> <br> <span>
-                    3. Steampunk Masterpiece: Aesthetic Meets Functionality</span> If you appreciate unique aesthetics, Zaviyar's steampunk-themed custom PC build is a work of art. The brass accents, antique gears, and custom-designed case make it a standout
-                build. This build is proof that PC building is not just about performance but also a canvas for artistic expression.
-
-                <br> <br> <span> 4. Minimalist Marvel: Clean and Elegant Design</span> Sometimes, less is more. [Customer Name]'s minimalist custom PC build is a testament to the elegance of simplicity. With a compact case, a single GPU, and clean cable
-                management, this PC exemplifies the "less clutter, more focus" mantra. The build is not just about what's included but what's left out, creating a zen-like computing experience.
-
-                <br> <br> <span>5. The Budget Beast: Value and Performance Combined</span> Not all inspiring builds come with a hefty price tag. [Customer Name] proves that a budget build can also be remarkable. Their custom PC features carefully chosen
-                components that strike a balance between cost and performance. It's a perfect example of making the most of what you have and optimizing for value.
-
-                <br> <br> <span>6. The Modder's Paradise: Creative Case Modding</span> Some customers take their custom PC builds to the next level by modifying their cases. [Customer Name]'s custom case mod, inspired by [Theme/Concept], is a sight to
-                behold. It showcases the dedication and skills required for case modding and proves that a PC can be a piece of art.
-
-                <br> <br> <span> Conclusion:</span><br> The custom PC build showcase from our customers is a testament to the diversity, creativity, and passion of the PC building community. Whether you're into gaming, content creation, aesthetics, or
-                budget-friendly builds, there's something to inspire you. These builds are not just about the components; they represent the dedication, innovation, and craftsmanship of our customers. If you're planning your own custom PC build, take
-                a page from these inspiring builds and let your imagination run wild. We're proud to be part of a community that continues to push the boundaries of what's possible in PC building. So, to all our customers who have shared their creations,
-                thank you for inspiring us and others to dream bigger and build better.</p>
         </div>
     </div>
 

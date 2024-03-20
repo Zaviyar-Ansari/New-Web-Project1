@@ -15,7 +15,7 @@ if(isset($_GET['logout'])){
    // Unset user_id and destroy the session
    unset($user_id);
    session_destroy();
-   header('location:index1.html');
+   header('location:index1.php');
    exit(); // Terminate script after redirection
 }
 
@@ -52,7 +52,7 @@ if(isset($_GET['logout'])){
       <h3><?php echo $fetch['name']; ?></h3>
       <a href="update_profile.php" class="btn">Update Profile</a>
       <a href="home.php?logout=<?php echo $user_id; ?>" onclick="return confirm('Are you sure you want to logout?')" class="delete-btn">Logout</a>
-      <a href="index1.html" class="btn">Home Page</a>
+      <a href="index1.php" class="btn">Home Page</a>
       <p>New <a href="login.php">login</a> or <a href="register.php">register</a></p>
    </div>
 

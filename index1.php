@@ -31,19 +31,19 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="index1.html">Home</a>
+                        <a class="nav-link active" href="index1.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop.html">Shop</a>
+                        <a class="nav-link" href="shop.php">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blogpage.html">Blog</a>
+                        <a class="nav-link" href="blogpage.php">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="AboutUspage.html">About</a>
+                        <a class="nav-link" href="AboutUspage.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contactuspage.html">Contact Us</a>
+                        <a class="nav-link" href="contactuspage.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <a href="cart.php"><i class="fa-solid fa-bag-shopping"></i> </a>
@@ -58,7 +58,7 @@
         <div class="container">
             <h1>Build. Work. Enjoy.</h1>
             <h5>Build your own <span>Custom PC</span></h5>
-            <button onclick="window.location.href='shop.html'" ;>Shop Now</button>
+            <button onclick="window.location.href='shop.php'" ;>Shop Now</button>
         </div>
     </section>
     <section class="brand">
@@ -108,7 +108,7 @@
         </div>
         <div class="row mx-auto container-fluid">
             <!--first-->
-            <div onclick="window.location.href='mainfeatured1.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='mainfeatured1.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="mainprodimg/pordimg1.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -122,7 +122,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--second-->
-            <div onclick="window.location.href='mainfeatured2.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='mainfeatured2.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="mainprodimg/pordimg2.jpeg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -136,7 +136,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--third-->
-            <div onclick="window.location.href='mainfeatured3.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='mainfeatured3.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="mainprodimg/pordimg3.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -150,7 +150,7 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
             <!--forth-->
-            <div onclick="window.location.href='mainfeatured4.html'" ; class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='mainfeatured4.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="mainprodimg/pordimg4.jpg" alt="">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -171,7 +171,7 @@
             <h4>MID SEASON'S SALES</h4>
             <h1>New Products <br> UP TO 20% OFF
             </h1>
-            <button onclick="window.location.href='shop.html'" ; class="text-uppercase case-button">Shop Now</button>
+            <button onclick="window.location.href='shop.php'" ; class="text-uppercase case-button">Shop Now</button>
         </div>
     </section>
     <section class="swiper mySwiper">

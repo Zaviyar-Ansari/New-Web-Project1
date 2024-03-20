@@ -24,19 +24,19 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="index1.html">Home</a>
+                        <a class="nav-link active" href="index1.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop.html">Shop</a>
+                        <a class="nav-link" href="shop.php">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blogpage.html">Blog</a>
+                        <a class="nav-link" href="blogpage.php">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="AboutUspage.html">About</a>
+                        <a class="nav-link" href="AboutUspage.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contactuspage.html">Contact Us</a>
+                        <a class="nav-link" href="contactuspage.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <i class="fa-solid fa-bag-shopping"></i> >
@@ -51,38 +51,49 @@
         <h1 class="font-weight-bold pt-5">Blogs</h1>
         <hr>
     </section>
-    <!--blog forth page-->
+    <!--blog sixth page-->
     <div class="wrapper1">
-        <img src="blogpageimg/download (1).jpeg" alt="">
+        <img src="blogpageimg/images (2).jpeg" alt="">
         <div class="text-box">
-            <h2>The Prebuilt PC Paradigm: Unveiling Ready-to-Use Powerhouses</h2>
-            <p><span>Introduction: </span>In the ever-evolving world of computing, the demand for high-performance machines has given rise to a new paradigm: prebuilt PCs. These ready-to-use powerhouses offer convenience and impressive specs, making them
-                an enticing option for users who seek top-notch performance without the hassle of DIY assembly. In this blog, we'll dive into the world of prebuilt PCs, unveiling their advantages, highlighting popular models, and helping you make informed
-                choices when considering one for your computing needs.
-                <br> <br> <span>1. The Appeal of Prebuilt PCs:</span> Plug and Play Convenience Prebuilt PCs, as the name suggests, arrive fully assembled and ready to use. Discover the convenience they offer, sparing users from the complexities of selecting
-                components and building a system from scratch. Unbox, plug in, and start enjoying the power and performance you desire.
-                <br> <br><span>2. Advantages of Prebuilt PCs:</span> Time, Assurance, and Support We'll explore the myriad advantages of opting for a prebuilt PC, including time savings, quality assurance, and customer support. Learn how these aspects
-                can simplify your computing experience and provide peace of mind.
-                <br> <br> <span>3.
-                    Top Prebuilt PC Models:</span> Unveiling the Powerhouses Delve into the world of top prebuilt PC models, including popular options from renowned manufacturers. We'll review the specs, performance, and features of these powerhouses
-                to help you choose the right one for your specific needs.
-                <br> <br> <span>  4. Gaming Prebuilt PCs:</span> Conquering the Virtual Worlds For gamers, prebuilt PCs offer a hassle-free way to experience gaming at its best. We'll take a close look at gaming-oriented prebuilt systems, including their
-                gaming capabilities, graphics cards, and immersive features.
-                <br> <br> <span> 5. Content Creation and Workstation Prebuilt PCs:</span> Fueling Creativity Explore prebuilt PCs designed for content creators and professionals. These workstations provide the computational muscle needed for tasks like
-                video editing, 3D modeling, and more. Discover the components and features that make them ideal for creative work.
-                <br> <br> <span> 6. Customization and Upgradability:</span> Tailoring Your Prebuilt PC Prebuilt PCs are not limited to off-the-shelf configurations. Learn how to customize and upgrade your prebuilt system to adapt to your evolving needs,
-                ensuring a long-lasting investment.
-                <br> <br> <span> 7. Prebuilt PCs vs. Custom-Built PCs:</span> Making the Right Choice We'll compare prebuilt PCs to custom-built counterparts, highlighting the pros and cons of each. By the end of this section, you'll have a clear understanding
-                of which option aligns better with your preferences and requirements.
-                <br> <br> <span> 8. Maintenance
-                    and Optimization:</span> Keeping Your Prebuilt PC at Its Best While prebuilt PCs are ready-to-use, they still require maintenance and optimization to ensure longevity and peak performance. We'll provide valuable tips on how to keep
-                your prebuilt powerhouse running smoothly.
-                <br> <br> <span>Conclusion:</span> <br>The prebuilt PC paradigm offers an exciting and convenient way to access powerful computing solutions. With various models tailored to different needs, these ready-to-use powerhouses can cater to
-                gamers, content creators, professionals, and general users alike. Whether you're seeking top-notch gaming performance or a workstation for intensive tasks, prebuilt PCs offer a compelling alternative to custom-built systems. Explore your
-                options, make an informed choice, and unlock the potential of a prebuilt PC that perfectly suits your computing needs.
+            <h2>Choosing the Right Components for Your Custom PC: comprehensive Overwiew.</h2>
+            <p>
+
+                <span>Introduction:</span> Building a custom PC is an exciting journey that allows you to create a computer that perfectly suits your needs and preferences. One of the most critical aspects of custom PC building is selecting the right
+                components. In this comprehensive guide, we will provide you with a detailed overview of the key components you need to consider when crafting your dream PC. Whether you're a gamer, content creator, or a professional, making informed component
+                choices is essential for a satisfying computing experience.
+
+                <br><br> <span>1. Central Processing Unit (CPU):</span> The Brain of Your PC The CPU is the heart of your custom PC. It determines the overall performance and capabilities of your system. Consider factors like clock speed, the number of
+                cores, and hyperthreading when choosing a CPU. Gamers may prefer high-clock-speed processors, while content creators may prioritize multi-core CPUs for rendering tasks.
+
+                <br><br> <span>2. Graphics Processing Unit (GPU):</span> Powering Your Visual Experience For gaming and content creation, the GPU is a crucial component. The choice between integrated and dedicated graphics depends on your specific needs.
+                Gamers will want a powerful GPU, while content creators may opt for models optimized for rendering tasks. Ensure compatibility with your monitor's resolution and refresh rate.
+
+                <br><br> <span>3. Memory (RAM):</span> Multitasking and Application Performance RAM is essential for multitasking and running applications smoothly. Consider your usage patterns to determine the appropriate RAM capacity. For gaming and
+                general use, 8-16GB may suffice, while content creators and professionals may require 32GB or more.
+
+                <br><br> <span>4. Storage:</span> Speed and Capacity Choices Storage solutions impact system speed and file storage. Choose between Solid-State Drives (SSDs) for speed and Hard Disk Drives (HDDs) for capacity. Alternatively, employ both
+                for optimal performance. M.2 NVMe SSDs are ideal for ultra-fast data access.
+
+                <br><br> <span>5. Motherboard:</span> The Central Nervous System Select a motherboard that complements your CPU choice and provides the features you need. Ensure compatibility with your RAM, GPU, and storage options. Motherboards come
+                in different sizes, such as ATX, Micro-ATX, and Mini-ITX, so consider your case size and expansion needs.
+
+                <br><br> <span>6. Power Supply Unit (PSU):</span> Sustaining Your System Your PSU provides power to all components, making it a critical choice. Ensure the wattage matches your system's requirements and consider efficiency ratings. Modular
+                PSUs offer better cable management for a cleaner build.
+
+                <br><br> <span>7. Case:</span> A Home for Your Components The case not only houses your components but also impacts cooling and aesthetics. Select a case that accommodates your chosen components, allows for efficient airflow, and matches
+                your preferred style.
+
+                <br><br> <span>8. Cooling Solutions:</span> Keeping Temperatures in Check Different CPUs and GPUs require varying cooling solutions. Some CPUs come with stock coolers, while others may benefit from aftermarket air or liquid coolers. Ensure
+                that your cooling solution keeps temperatures at optimal levels.
+
+                <br> <br><span>9. Peripherals:</span> Completing Your Setup Don't forget essential peripherals like a keyboard, mouse, monitor, and audio devices. Gaming peripherals, in particular, can enhance your gaming experience. Choose the ones that
+                best suit your specific needs and preferences.
+
+                <br><br> <span>Conclusion:</span><br> Choosing the right components for your custom PC is a crucial step in creating a system that perfectly matches your needs and expectations. Whether you're a gamer, content creator, or professional,
+                the component choices you make will significantly impact your PC's performance and capabilities. Make informed decisions by considering your usage patterns, budget, and future upgrade potential. With the right components, your custom PC
+                will provide a tailored and satisfying computing experience for years to come.
 
             </p>
-
         </div>
     </div>
 

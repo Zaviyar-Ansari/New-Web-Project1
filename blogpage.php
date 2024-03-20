@@ -24,19 +24,19 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="index1.html">Home</a>
+                        <a class="nav-link active" href="index1.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop.html">Shop</a>
+                        <a class="nav-link" href="shop.php">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blogpage.html">Blog</a>
+                        <a class="nav-link" href="blogpage.php">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="AboutUspage.html">About</a>
+                        <a class="nav-link" href="AboutUspage.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contactuspage.html">Contact Us</a>
+                        <a class="nav-link" href="contactuspage.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <i class="fa-solid fa-bag-shopping"></i> >
@@ -46,42 +46,89 @@
             </div>
         </div>
     </nav>
-
-    <!--upper section of blog page-->
     <section id="blog-home" class="pt-5 mt-5 container">
         <h1 class="font-weight-bold pt-5">Blogs</h1>
         <hr>
     </section>
-    <!--blog second page-->
-    <div class="wrapper1">
-        <img src="blogpageimg/download (2).jpeg" alt="">
-        <div class="text-box">
-            <h2>Component Chronicles: Exploring the Heart of Custom PCs.</h2>
-            <p><span>Introduction:</span> When it comes to custom PCs, the components you choose are the building blocks that define your system's performance and capabilities. In this blog, we embark on a journey through the "Component Chronicles," where
-                we'll explore the essential elements that form the heart of custom PCs. From powerful processors to high-performance graphics cards, we'll delve into the world of computer components to help you make informed choices for your dream PC.
-                Let's get started!<br><br>
-                <br><br> <span>1: The Processor (CPU):</span> The Brain of Your PC At the core of every computer lies the central processing unit (CPU), often referred to as the brain of the system. Explore the various CPU options available, from high-performance
-                models designed for gaming and content creation to budget-friendly choices for everyday computing. Learn about clock speed, cores, and threads, and discover how to select the right CPU for your specific needs.
-                <br><br> <span>2: Graphics Card (GPU):</span> Unleashing Visual Power For gamers and content creators, the graphics card (GPU) is a critical component. Dive into the world of GPUs, from entry-level options to high-end gaming monsters.
-                Understand the role of VRAM, CUDA cores, and ray tracing capabilities, and discover how to choose the perfect GPU to bring your visuals to life.
-                <br><br> <span>3: Memory (RAM):</span> Multitasking Mastery RAM (Random Access Memory) is the memory your PC uses to run applications and manage tasks simultaneously. Learn how to select the ideal RAM size and speed for your custom PC,
-                ensuring seamless multitasking and lightning-fast data access.
-                <br><br> <span>4: Storage Solutions:</span> Speed vs. Capacity Storage is where your files, games, and applications reside. Compare the benefits of Solid-State Drives (SSDs) and Hard Disk Drives (HDDs) to find the perfect balance between
-                speed and capacity. We'll also explore M.2 drives and NVMe SSDs for ultra-fast data access.
-                <br><br> <span>5: Motherboards: </span>The Nervous System of Your PC The motherboard is the central hub where all components connect. Explore different motherboard sizes, form factors, and chipsets to understand how they impact your PC's
-                capabilities. Find out which motherboard suits your specific CPU and future upgrade plans.
-                <br><br> <span>6: Power Supply Unit (PSU):</span> Ensuring a Steady Flow of Power Your PC's power supply unit (PSU) is crucial for maintaining stability and preventing damage. Discover how to choose the right wattage, efficiency rating,
-                and connectors for your custom PC to ensure a reliable power source. Cooling Solutions: Keeping Temperatures in Check Efficient cooling is essential to prevent overheating and maintain your PC's performance. Explore air cooling, liquid
-                cooling, and other cooling solutions to keep your components at optimal temperatures, whether you're gaming or engaging in resource-intensive tasks.
-                <br><br><span>7: Peripherals:</span> Completing Your Setup Your custom PC is incomplete without the right peripherals. We'll discuss essential accessories like gaming keyboards, mice, monitors, and headsets, helping you create a well-rounded
-                and immersive computing experience.
-                <br><br><span>Conclusion:</span><br> The "Component Chronicles" have taken us through the heart of custom PCs, revealing the key components that shape your system's performance and capabilities. Armed with this knowledge, you're now better
-                equipped to make informed decisions when building your dream PC. Whether you're a gamer, content creator, or a casual user, choosing the right components is the first step toward creating a powerful and customized computing experience.
-                Stay tuned for more in-depth insights and recommendations in our future blogs as we continue to explore the exciting world of custom PCs.</p>
+    <!---->
+    <div class="card-group">
+        <div class="card" onclick="window.location.href='blogpage1.php'" ;>
+            <img src="blogpageimg/images (1).jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Building Your Dream Machine: The Ultimate Guide to Custom PC Creation.</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card" onclick="window.location.href='blogpage2.php'" ;>
+            <img src="blogpageimg/download (2).jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Component Chronicles: Exploring the Heart of Custom PCs.</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <!---->
+    <div class="card-group">
+        <div class="card" onclick="window.location.href='blogpage3.php'" ;>
+            <img src="blogpageimg/download.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Crafting Custom PC Experiences: From Vision to Reality</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 2 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card" onclick="window.location.href='blogpage4.php'" ;>
+            <img src="blogpageimg/download (1).jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">The Prebuilt PC Paradigm: Unveiling Ready-to-Use Powerhouses</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <!---->
+    <section id="blog-container" class="container pt-5">
+        <div class="row">
+            <!--bnner-->
+            <div class="col-lg-12 col-md-12 col-12 pb-5">
+                <div class="post-img">
+                    <img class="img-fluid w-100" src="blogpageimg/Custom-Gaming-Pc-big.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!---->
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col" onclick="window.location.href='blogpage5.php'" ;>
+            <div class="card">
+                <img src="blogpageimg/download (3).jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Prebuilt VS Custom PC: Whcih is Right for you?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col" onclick="window.location.href='blogpage6.php'" ;>
+            <div class="card">
+                <img src="blogpageimg/images (2).jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Choosing the Right Components for Your Custom PC: comprehensive Overwiew.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col" onclick="window.location.href='blogpage7.php'" ;>
+            <div class="card">
+                <img src="blogpageimg/pc-build-ideas-7.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Custom PC Build Showcase Inspring Builds from Our Customers.</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!--footer-->
+
+
     <footer class="mt-5 py-5">
         <div class="row container mx-auto pt-5">
             <div class="footer-one col-lg-3 col-md-6 col-12">
@@ -145,6 +192,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>
