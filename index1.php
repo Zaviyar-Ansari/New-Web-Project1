@@ -323,7 +323,7 @@
         </div>
         <div class="form">
             <input type="text" placeholder="Your email address">
-            <button>Sign Up</button>
+            <a href="register.php"><button>Sign Up</button></a>
         </div>
     </section>
     <footer class="mt-5 py-5">

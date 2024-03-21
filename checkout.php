@@ -20,10 +20,11 @@ if(isset($_POST['order_btn'])){
    if(mysqli_num_rows($cart_query) > 0){
       while($product_item = mysqli_fetch_assoc($cart_query)){
          $product_name[] = $product_item['name'] .' ('. $product_item['quantity'] .') ';
-         $product_price = number_format($product_item['price'] * $product_item['quantity']);
+         // Remove number_format() here
+         $product_price = $product_item['price'] * $product_item['quantity'];
          $price_total += $product_price;
-      };
-   };
+      }
+   }
 
    $total_product = implode(', ',$product_name);
    $detail_query = mysqli_query($conn, "INSERT INTO `order`(name, number, email, method, flat, street, city, state, country, pin_code, total_products, total_price) VALUES('$name','$number','$email','$method','$flat','$street','$city','$state','$country','$pin_code','$total_product','$price_total')") or die('query failed');
@@ -35,7 +36,7 @@ if(isset($_POST['order_btn'])){
          <h3>thank you for shopping!</h3>
          <div class='order-detail'>
             <span>".$total_product."</span>
-            <span class='total'> total : $".$price_total."/-  </span>
+            <span class='total'> total : $".number_format($price_total)."/-  </span>
          </div>
          <div class='customer-details'>
             <p> your name : <span>".$name."</span> </p>
@@ -44,8 +45,10 @@ if(isset($_POST['order_btn'])){
             <p> your address : <span>".$flat.", ".$street.", ".$city.", ".$state.", ".$country." - ".$pin_code."</span> </p>
             <p> your payment mode : <span>".$method."</span> </p>
             <p>(*pay when product arrives*)</p>
+            <p>Your Order has been placed successfully!</p>
          </div>
-            <a href='products.php' class='btn'>continue shopping</a>
+         <button class='btn' onclick='goBack()'>Back</button>
+
          </div>
       </div>
       ";
@@ -87,7 +90,8 @@ if(isset($_POST['order_btn'])){
          $grand_total = 0;
          if(mysqli_num_rows($select_cart) > 0){
             while($fetch_cart = mysqli_fetch_assoc($select_cart)){
-            $total_price = number_format($fetch_cart['price'] * $fetch_cart['quantity']);
+            // Remove number_format() here
+            $total_price = $fetch_cart['price'] * $fetch_cart['quantity'];
             $grand_total = $total += $total_price;
       ?>
       <span><?= $fetch_cart['name']; ?>(<?= $fetch_cart['quantity']; ?>)</span>
@@ -97,53 +101,53 @@ if(isset($_POST['order_btn'])){
          echo "<div class='display-order'><span>your cart is empty!</span></div>";
       }
       ?>
-      <span class="grand-total"> grand total : $<?= $grand_total; ?>/- </span>
+      <span class="grand-total"> grand total : $<?= number_format($grand_total); ?>/- </span>
    </div>
 
       <div class="flex">
          <div class="inputBox">
             <span>your name</span>
-            <input type="text" placeholder="enter your name" name="name" required>
+            <input type="text" placeholder="Enter Your Name" name="name" required>
          </div>
          <div class="inputBox">
             <span>your number</span>
-            <input type="number" placeholder="enter your number" name="number" required>
+            <input type="number" placeholder="Enter Your Number" name="number" required>
          </div>
          <div class="inputBox">
             <span>your email</span>
-            <input type="email" placeholder="enter your email" name="email" required>
+            <input type="email" placeholder="Enter Your Email" name="email" required>
          </div>
          <div class="inputBox">
             <span>payment method</span>
             <select name="method">
-               <option value="cash on delivery" selected>cash on devlivery</option>
-               <option value="credit cart">credit cart</option>
-               <option value="paypal">paypal</option>
+               <option value="cash on delivery" selected>Cash On Delivery</option>
+               <option value="credit card">credit Card</option>
+               <option value="paypal">Paypal</option>
             </select>
          </div>
          <div class="inputBox">
             <span>address line 1</span>
-            <input type="text" placeholder="e.g. flat no." name="flat" required>
+            <input type="text" placeholder="Flat No" name="flat" required>
          </div>
          <div class="inputBox">
             <span>address line 2</span>
-            <input type="text" placeholder="e.g. street name" name="street" required>
+            <input type="text" placeholder="Street Name" name="street" required>
          </div>
          <div class="inputBox">
             <span>city</span>
-            <input type="text" placeholder="e.g. mumbai" name="city" required>
+            <input type="text" placeholder="Lahore" name="city" required>
          </div>
          <div class="inputBox">
             <span>state</span>
-            <input type="text" placeholder="e.g. maharashtra" name="state" required>
+            <input type="text" placeholder="Punjab" name="state" required>
          </div>
          <div class="inputBox">
             <span>country</span>
-            <input type="text" placeholder="e.g. india" name="country" required>
+            <input type="text" placeholder="Pakistan" name="country" required>
          </div>
          <div class="inputBox">
             <span>pin code</span>
-            <input type="text" placeholder="e.g. 123456" name="pin_code" required>
+            <input type="text" placeholder="12345" name="pin_code" required>
          </div>
       </div>
       <input type="submit" value="order now" name="order_btn" class="btn">
@@ -155,6 +159,11 @@ if(isset($_POST['order_btn'])){
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
-   
+<script>
+function goBack() {
+  window.location.href = "cart.php";
+}
+</script>
+
 </body>
 </html>
