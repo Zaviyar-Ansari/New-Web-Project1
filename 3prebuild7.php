@@ -125,7 +125,7 @@ if(isset($message)){
                     </li>
                     <li class="nav-item">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <i class="fa-solid fa-bag-shopping"></i>
+                        <a href="cart.php"><i class="fa-solid fa-bag-shopping"></i></a>
                         <i class="fa-regular fa-user"></i>
                     </li>
                 </ul>

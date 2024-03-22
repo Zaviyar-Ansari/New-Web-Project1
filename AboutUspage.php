@@ -45,7 +45,7 @@
                         <a class="nav-link" href="contactuspage.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <i class="fa-solid fa-bag-shopping"></i> >
+                        <a href="cart.php"><i class="fa-solid fa-bag-shopping"></i></a>
                         <a href="home.php"><i class="fa-regular fa-user"></i></a>
                     </li>
                 </ul>
