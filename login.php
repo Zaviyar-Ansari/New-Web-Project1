@@ -6,7 +6,7 @@ session_start();
 if(isset($_POST['submit'])){
 
    $email = mysqli_real_escape_string($conn, $_POST['email']);
-   $password = mysqli_real_escape_string($conn, md5($_POST['password']));
+   $password = mysqli_real_escape_string($conn, $_POST['password']); // Password is not hashed
 
    $select = mysqli_query($conn, "SELECT * FROM `profile1` WHERE email = '$email' AND password = '$password'") or die('Query failed');
 
@@ -42,8 +42,8 @@ if(isset($_POST['submit'])){
       <h3>Login Now</h3>
       <?php
       if(isset($message)){
-         foreach($message as $message){
-            echo '<div class="message">'.$message.'</div>';
+         foreach($message as $msg){
+            echo '<div class="message">'.$msg.'</div>';
          }
       }
       ?>

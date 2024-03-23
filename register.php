@@ -8,8 +8,8 @@ if (isset($_POST['submit'])) {
    $gender = mysqli_real_escape_string($conn, $_POST['gender']);
    $birthday = mysqli_real_escape_string($conn, $_POST['birthday']);
    $address = mysqli_real_escape_string($conn, $_POST['address']);
-   $pass = mysqli_real_escape_string($conn, md5($_POST['password']));
-   $cpass = mysqli_real_escape_string($conn, md5($_POST['cpassword']));
+   $pass = mysqli_real_escape_string($conn, $_POST['password']); // Store password in its original form
+   $cpass = mysqli_real_escape_string($conn, $_POST['cpassword']);
    $image = $_FILES['image']['name'];
    $image_size = $_FILES['image']['size'];
    $image_tmp_name = $_FILES['image']['tmp_name'];
@@ -38,6 +38,7 @@ if (isset($_POST['submit'])) {
    }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

@@ -88,7 +88,7 @@
                 <img class="image-fluid" src="prodcatgimg/catgimg2.webp" alt="">
                 <div class="details">
                     <h2>Custom Build </h2>
-                    <button class="text-uppercase">Shop Now</button>
+                    <a href="custombuild.php"><button class="text-uppercase">Shop Now</button></a>
                 </div>
             </div>
             <div class="one col-lg-4 col-md-12 col-12 p-0">
