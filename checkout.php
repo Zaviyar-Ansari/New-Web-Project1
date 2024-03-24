@@ -1,67 +1,80 @@
 <?php
+session_start();
 
 @include 'config.php';
 
-if(isset($_POST['order_btn'])){
-   // Validate user inputs (name, number, email, etc.) here
-   
-   $name = mysqli_real_escape_string($conn, $_POST['name']);
-   $number = mysqli_real_escape_string($conn, $_POST['number']);
-   $email = mysqli_real_escape_string($conn, $_POST['email']);
-   $method = mysqli_real_escape_string($conn, $_POST['method']);
-   $flat = mysqli_real_escape_string($conn, $_POST['flat']);
-   $street = mysqli_real_escape_string($conn, $_POST['street']);
-   $city = mysqli_real_escape_string($conn, $_POST['city']);
-   $state = mysqli_real_escape_string($conn, $_POST['state']);
-   $country = mysqli_real_escape_string($conn, $_POST['country']);
-   $pin_code = mysqli_real_escape_string($conn, $_POST['pin_code']);
-
-   // Fetch items from the cart
-   $cart_query = mysqli_query($conn, "SELECT * FROM `cart`");
-   $price_total = 0;
-   $product_name = array(); // Initialize an array to store product names
-   if(mysqli_num_rows($cart_query) > 0){
-      while($product_item = mysqli_fetch_assoc($cart_query)){
-         $product_name[] = $product_item['name'] .' ('. $product_item['quantity'] .') ';
-         $product_price = $product_item['price'] * $product_item['quantity'];
-         $price_total += $product_price;
-      }
-   }
-
-   $total_product = implode(', ',$product_name);
-   
-   // Insert order details into the database
-   $detail_query = mysqli_query($conn, "INSERT INTO `order`(name, number, email, method, flat, street, city, state, country, pin_code, total_products, total_price) VALUES('$name','$number','$email','$method','$flat','$street','$city','$state','$country','$pin_code','$total_product','$price_total')") or die('query failed');
-
-   // If order details are successfully inserted, remove items from the cart
-   if($detail_query){
-      mysqli_query($conn, "DELETE FROM `cart`");
-      
-      // Display the success message
-      echo "
-      <div class='order-message-container'>
-         <div class='message-container'>
-            <h3>Thank you for shopping!</h3>
-            <div class='order-detail'>
-               <span>".$total_product."</span>
-               <span class='total'>Total: $".number_format($price_total)."/-</span>
-            </div>
-            <div class='customer-details'>
-               <p>Your name: <span>".$name."</span></p>
-               <p>Your number: <span>".$number."</span></p>
-               <p>Your email: <span>".$email."</span></p>
-               <p>Your address: <span>".$flat.", ".$street.", ".$city.", ".$state.", ".$country." - ".$pin_code."</span></p>
-               <p>Your payment mode: <span>".$method."</span></p>
-               <p>(*Pay when product arrives*)</p>
-               <p>Your order has been placed successfully!</p>
-            </div>
-            <button class='btn' onclick='goBack()'>Back</button>
-         </div>
-      </div>
-      ";
-   }
+// Function to check if the user is logged in
+function isLoggedIn() {
+    return isset($_SESSION['user_id']);
 }
 
+// Check if the order button is clicked
+if(isset($_POST['order_btn'])){
+    // If the user is not logged in, redirect to the login page
+    if(!isLoggedIn()) {
+        header("Location: login.php");
+        exit(); // Stop further execution of the script
+    }
+    
+    // User is logged in, proceed with order processing
+
+    // Validate user inputs (name, number, email, etc.) here
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $number = mysqli_real_escape_string($conn, $_POST['number']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $method = mysqli_real_escape_string($conn, $_POST['method']);
+    $flat = mysqli_real_escape_string($conn, $_POST['flat']);
+    $street = mysqli_real_escape_string($conn, $_POST['street']);
+    $city = mysqli_real_escape_string($conn, $_POST['city']);
+    $state = mysqli_real_escape_string($conn, $_POST['state']);
+    $country = mysqli_real_escape_string($conn, $_POST['country']);
+    $pin_code = mysqli_real_escape_string($conn, $_POST['pin_code']);
+
+    // Fetch items from the cart
+    $cart_query = mysqli_query($conn, "SELECT * FROM `cart`");
+    $price_total = 0;
+    $product_name = array(); // Initialize an array to store product names
+    if(mysqli_num_rows($cart_query) > 0){
+        while($product_item = mysqli_fetch_assoc($cart_query)){
+            $product_name[] = $product_item['name'] .' ('. $product_item['quantity'] .') ';
+            $product_price = $product_item['price'] * $product_item['quantity'];
+            $price_total += $product_price;
+        }
+    }
+
+    $total_product = implode(', ',$product_name);
+   
+    // Insert order details into the database
+    $detail_query = mysqli_query($conn, "INSERT INTO `order`(name, number, email, method, flat, street, city, state, country, pin_code, total_products, total_price) VALUES('$name','$number','$email','$method','$flat','$street','$city','$state','$country','$pin_code','$total_product','$price_total')") or die('query failed');
+
+    // If order details are successfully inserted, remove items from the cart
+    if($detail_query){
+        mysqli_query($conn, "DELETE FROM `cart`");
+        
+        // Display the success message
+        echo "
+        <div class='order-message-container'>
+            <div class='message-container'>
+                <h3>Thank you for shopping!</h3>
+                <div class='order-detail'>
+                    <span>".$total_product."</span>
+                    <span class='total'>Total: $".number_format($price_total)."/-</span>
+                </div>
+                <div class='customer-details'>
+                    <p>Your name: <span>".$name."</span></p>
+                    <p>Your number: <span>".$number."</span></p>
+                    <p>Your email: <span>".$email."</span></p>
+                    <p>Your address: <span>".$flat.", ".$street.", ".$city.", ".$state.", ".$country." - ".$pin_code."</span></p>
+                    <p>Your payment mode: <span>".$method."</span></p>
+                    <p>(*Pay when product arrives*)</p>
+                    <p>Your order has been placed successfully!</p>
+                </div>
+                <button class='btn' onclick='goBack()'>Back</button>
+            </div>
+        </div>
+        ";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -76,10 +89,10 @@ if(isset($_POST['order_btn'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="cartcss/style.css">
+   <link rel="stylesheet" href="cartscc/style.css">
 
 </head>
-<body>
+<body> 
 
 <div class="container">
 
@@ -152,10 +165,19 @@ if(isset($_POST['order_btn'])){
             <input type="text" placeholder="Pakistan" name="country" required>
          </div>
          <div class="inputBox">
-            <span>pin code</span>
-            <input type="text" placeholder="12345" name="pin_code" required>
+         <span>pin code</span>
+         <input type="text" placeholder="12345" name="pin_code" required>
          </div>
       </div>
+      
+      <?php
+      // Check if the user is not logged in
+      if (!isLoggedIn()) {
+         // Display a message prompting the user to log in or register
+         echo "<p class='login-message'>Please <a href='login.php'>login</a> or <a href='register.php'>register</a> to place your order.</p>";
+      }
+      ?>
+      
       <input type="submit" value="order now" name="order_btn" class="btn">
    </form>
 

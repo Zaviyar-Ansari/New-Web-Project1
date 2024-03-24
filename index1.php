@@ -1,3 +1,13 @@
+<?php
+// Assuming $conn is your database connection variable
+$conn = mysqli_connect("localhost", "root", "", "login_register");
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$select_rows = mysqli_query($conn, "SELECT * FROM `cart`") or die('query failed');
+$row_count = mysqli_num_rows($select_rows);
+?>
 <!doctype html>
 <html lang="en">
 
@@ -45,10 +55,19 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contactuspage.php">Contact Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="cart.php"><i class="fa-solid fa-bag-shopping"></i> </a>
-                        <a href="home.php"><i class="fa-regular fa-user"></i></a>
-                    </li>
+                    <!-- Inside your cart icon -->
+<!-- Inside your cart icon -->
+<li class="nav-item">
+    <a href="cart.php">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span id="cartItemCount" class="badge badge-pill badge-primary"><?php echo $row_count; ?></span>
+    </a>
+    <a href="home.php">
+        <i class="fa-regular fa-user"></i>
+    </a>
+</li>
+
+
                 </ul>
             </div>
         </div>
@@ -411,6 +430,8 @@
             },
         });
     </script>
+    
+
 </body>
 
 </html>

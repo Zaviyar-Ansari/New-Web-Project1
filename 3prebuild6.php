@@ -122,10 +122,15 @@ if(isset($message)){
                     <li class="nav-item">
                         <a class="nav-link" href="contactuspage.php">Contact Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="cart.php"><i class="fa-solid fa-bag-shopping"></i></a>
-                        <a href="home.php"><i class="fa-regular fa-user"></i></a>
-                    </li>
+<li class="nav-item">
+    <a href="cart.php">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span id="cartItemCount" class="badge badge-pill badge-primary"><?php echo $row_count; ?></span>
+    </a>
+    <a href="home.php">
+        <i class="fa-regular fa-user"></i>
+    </a>
+</li>
                 </ul>
             </div>
         </div>
