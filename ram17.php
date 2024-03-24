@@ -1,4 +1,12 @@
 <?php
+// Assuming $conn is your database connection variable
+$conn = mysqli_connect("localhost", "root", "", "login_register");
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$select_rows = mysqli_query($conn, "SELECT * FROM `cart`") or die('query failed');
+$row_count = mysqli_num_rows($select_rows);?><?php
 @include 'config.php';
 
 $message = array(); // Initialize an empty array for messages
