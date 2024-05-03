@@ -8,6 +8,74 @@ if (!$conn) {
 $select_rows = mysqli_query($conn, "SELECT * FROM `cart`") or die('query failed');
 $row_count = mysqli_num_rows($select_rows);
 ?>
+<?php
+// Assuming $conn is your database connection variable
+$conn = mysqli_connect("localhost", "root", "", "login_register");
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$select_rows = mysqli_query($conn, "SELECT * FROM `cart`") or die('query failed');
+$row_count = mysqli_num_rows($select_rows);?><?php
+@include 'config.php';
+
+$message = array(); // Initialize an empty array for messages
+
+// Check if the form was submitted
+if(isset($_POST['add_to_cart'])){
+    // Form submission logic
+    $product_id = $_POST['product_id']; // Get the product ID from the form
+
+    // Fetch product data based on the provided product ID
+    $select_product = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$product_id'");
+
+    if(mysqli_num_rows($select_product) > 0){
+        $product_data = mysqli_fetch_assoc($select_product);
+
+        $product_name = $product_data['name'];
+        $product_price = $product_data['price'];
+        $product_image = $product_data['image'];
+        $product_quantity = 1;
+
+        // Check if the product is already in the cart
+        $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name'");
+
+        if(mysqli_num_rows($select_cart) > 0){
+            $message[] = 'Product already added to cart';
+        } else {
+            // Insert the product into the cart table
+            $insert_product = mysqli_query($conn, "INSERT INTO `cart` (name, price, image, quantity) VALUES ('$product_name', '$product_price', '$product_image', '$product_quantity')");
+            if($insert_product){
+                $message[] = 'Product added to cart successfully';
+
+                // If you want to store the data in another table, you can do so here
+                // For example, let's say you have a table named 'orders' to store order details
+                $insert_order = mysqli_query($conn, "INSERT INTO `orders` (product_id, product_name, product_price, product_image, quantity) VALUES ('$product_id', '$product_name', '$product_price', '$product_image', '$product_quantity')");
+                if($insert_order){
+                    $message[] = 'Order details stored successfully';
+                } else {
+                    $message[] = 'Error storing order details: ' . mysqli_error($conn); // Display MySQL error message
+                }
+            } else {
+                $message[] = 'Error adding product to cart: ' . mysqli_error($conn); // Display MySQL error message
+            }
+        }
+        
+        // Redirect to the same page to prevent form resubmission
+        header("Location: {$_SERVER['PHP_SELF']}");
+        exit();
+    } else {
+        $message[] = 'Product not found';
+    }
+}
+
+// Display messages
+if(isset($message)){
+    foreach($message as $msg){
+        echo '<div class="message">' . $msg . '</div>';
+    }
+}
+?>
 <!doctype html>
 <html lang="en">
 
@@ -25,7 +93,25 @@ $row_count = mysqli_num_rows($select_rows);
     <link rel="stylesheet" href="style1.css">
     <!--styling-->
     <style>
-
+        .product img {
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            object-fit: cover;
+        }
+        
+        #featured>div.row.mx-auto.container>nav>ul>li.page-item.active>a {
+            background-color: black;
+        }
+        
+        #featured>div.row.mx-auto.container>nav>ul>li:nth-child(n):hover>a {
+            background-color: coral;
+            color: white;
+        }
+        
+        .pagination a {
+            color: black;
+        }
     </style>
 </head>
 
@@ -138,7 +224,10 @@ $row_count = mysqli_num_rows($select_rows);
                 </div>
                 <h5 class="p-name">ZNXT pre Build PC</h5>
                 <h4 class="p-price"> PKR 1,929,399 </h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="318"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--second-->
             <div onclick="window.location.href='mainfeatured2.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -152,7 +241,10 @@ $row_count = mysqli_num_rows($select_rows);
                 </div>
                 <h5 class="p-name">Corsiar pre Build PC</h5>
                 <h4 class="p-price"> PKR 1,429,399</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="319"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--third-->
             <div onclick="window.location.href='mainfeatured3.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -166,7 +258,10 @@ $row_count = mysqli_num_rows($select_rows);
                 </div>
                 <h5 class="p-name">EVGA GeForce GTX TITAN 2</h5>
                 <h4 class="p-price"> PKR 17,699</h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="320"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
             <!--forth-->
             <div onclick="window.location.href='mainfeatured4.php'" ; class="product text-center col-lg-3 col-md-4 col-12">
@@ -180,7 +275,10 @@ $row_count = mysqli_num_rows($select_rows);
                 </div>
                 <h5 class="p-name">MSI A320M-A PRO</h5>
                 <h4 class="p-price"> PKR 15,500 </h4>
-                <button class="buy-btn">Buy Now</button>
+                <form action="" method="post">
+                    <input type="hidden" name="product_id" value="321"> <!-- Set the product ID -->
+                    <input type="submit" class="buy-btn" value="Add to Cart" name="add_to_cart">
+                    </form>
             </div>
         </div>
 
@@ -430,7 +528,7 @@ $row_count = mysqli_num_rows($select_rows);
             },
         });
     </script>
-    
+    <script src="js/script.js"></script> 
 
 </body>
 
